@@ -19,7 +19,8 @@
         <activity android:name=".Pay_Euro" />
         <activity android:name=".Edit" />
         <activity android:name=".MoneySet" />
-        <activity android:name=".ShowMeTheMoney"></activity>
+        <activity android:name=".ShowMeTheMoney" />
+        <activity android:name=".Pay_Yen"></activity>
     </application>
 
 </manifest>
