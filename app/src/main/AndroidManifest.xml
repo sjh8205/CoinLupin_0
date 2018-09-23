@@ -16,11 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pay_Euro" />
+        <activity android:name=".Pay_Euro"/>
+        <activity android:name=".Pay_Yen"/>
         <activity android:name=".Edit" />
         <activity android:name=".MoneySet" />
         <activity android:name=".ShowMeTheMoney" />
-        <activity android:name=".Pay_Yen"></activity>
     </application>
 
 </manifest>
