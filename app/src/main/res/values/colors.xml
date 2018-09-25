@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="BgColor_Euro">#c8dedf</color>
+    <color name="DivideColor">#2d9fa4</color>
+    <color name="SelectedColor">#006469</color>
+    <color name="Black">#000000</color>
+    <color name="ActionBar">#77ffffff</color>
 </resources>

@@ -1,9 +1,472 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoneySet_Euro">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BgColor_Euro"
+        tools:context=".MoneySet_Euro"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/ActionBar"
+            android:layout_marginBottom="10dp">
 
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="예산 설정"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/euro1"
+                />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_cent_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_cent_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_cent_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_cent_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_cent_20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_cent_50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_100"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_200"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="25dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/pick_euro_500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="@color/DivideColor"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_max="50"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/SelectedColor"
+                app:np_selectedTextSize="@dimen/selected_text_size"
+                app:np_textColor="@color/DivideColor"
+                app:np_textSize="@dimen/text_size"
+                app:np_typeface="@string/roboto_light"
+                app:np_value="0"
+                android:background="@color/ActionBar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
