@@ -220,7 +220,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp" />
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_1000"
