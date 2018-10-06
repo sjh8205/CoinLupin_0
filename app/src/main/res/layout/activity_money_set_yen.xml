@@ -339,6 +339,7 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/SubmitBudget_yen"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginVertical="20dp"

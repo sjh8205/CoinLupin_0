@@ -506,7 +506,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginVertical="20dp"
                 android:layout_marginHorizontal="140dp"
-                android:id="@+id/SubmitBudget"
+                android:id="@+id/SubmitBudget_euro"
                 android:background="@color/ActionBar"
                 android:text="확 인"
                 android:textSize="15sp"/>

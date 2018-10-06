@@ -9,19 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home_ChooseCountry" />
-        <activity android:name=".Pay_Euro" />
-        <activity android:name=".Pay_Yen" />
-        <activity android:name=".Edit" />
-        <activity android:name=".MoneySet_Euro">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowMeTheMoney" />
+        <activity android:name=".Home_ChooseCountry"/>
+        <activity android:name=".Pay_Euro" />
+        <activity android:name=".Pay_Yen" />
+        <activity android:name=".Edit_Yen" />
+        <activity android:name=".MoneySet_Euro"/>
+        <activity android:name=".ShowMeTheMoney_Yen" />
         <activity android:name=".MoneySet_Yen" />
+        <activity android:name=".Edit_Euro" />
+        <activity android:name=".ShowMeTheMoney_Euro" />
+        <activity android:name=".Recommend_Euro" />
+        <activity android:name=".Recommend_Yen"/>
     </application>
 
 </manifest>

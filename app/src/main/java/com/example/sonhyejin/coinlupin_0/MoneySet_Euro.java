@@ -1,5 +1,7 @@
 package com.example.sonhyejin.coinlupin_0;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -22,23 +24,28 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 
-
 public class MoneySet_Euro extends AppCompatActivity {
 
     private static String TAG = "NumberPicker";
 
+    //int i = shared.getInt("key2", -1);
+
+    //editor.remove("key1");
+    //editor.commit();
+
+
     private int mSelectionDividerColor = DEFAULT_DIVIDER_COLOR;
     private static final int DEFAULT_DIVIDER_COLOR = 0xFF000000;
     private Drawable mSelectionDivider;
-    ArrayList<Storage> data;
-    Storage store;
+    //ArrayList<Storage> data;
+    //Storage store;
     int E1,E2,E5,E10,E20,E50,E100,E200,E500,E1000,E2000,E5000,E10000,E20000,E50000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_set_euro);
-        Button submit = findViewById(R.id.SubmitBudget);
+        Button submit = findViewById(R.id.SubmitBudget_euro);
 
         NumberPicker e1 = findViewById(R.id.cent_1);
         E1 = e1.getValue();
@@ -71,15 +78,41 @@ public class MoneySet_Euro extends AppCompatActivity {
         NumberPicker e50000 = findViewById(R.id.euro_500);
         E50000 = e50000.getValue();
 
+
+
        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /*
                 store = new Storage(E1,E2,E5,E10,E20,
                         E50,E100,E200,E500,E1000,
                         E2000,E5000,E10000,E20000,E50000,
                         0,0,0,0,0,
                         0,0,0,0,0);
                 data.add(store);
+
+                */
+
+                SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+
+                editor.putInt("cent1",E1);
+                editor.putInt("cent2",E2);
+                editor.putInt("cent5",E5);
+                editor.putInt("cent10",E10);
+                editor.putInt("cent20",E20);
+                editor.putInt("cent50",E50);
+                editor.putInt("cent100",E100);
+                editor.putInt("cent200",E200);
+                editor.putInt("cent500",E500);
+                editor.putInt("cent1000",E1000);
+                editor.putInt("cent2000",E2000);
+                editor.putInt("cent5000",E5000);
+                editor.putInt("cent10000",E10000);
+                editor.putInt("cent20000",E20000);
+                editor.putInt("cent50000",E50000);
+                editor.apply();
             }
         });
     }

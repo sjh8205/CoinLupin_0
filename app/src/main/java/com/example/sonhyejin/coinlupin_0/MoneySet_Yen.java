@@ -1,5 +1,7 @@
 package com.example.sonhyejin.coinlupin_0;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -27,18 +29,20 @@ public class MoneySet_Yen extends AppCompatActivity {
 
     private static String TAG = "NumberPicker";
 
+
+
     private int mSelectionDividerColor = DEFAULT_DIVIDER_COLOR;
     private static final int DEFAULT_DIVIDER_COLOR = 0xFF000000;
     private Drawable mSelectionDivider;
-    ArrayList<Storage> data;
-    Storage store;
+    //ArrayList<Storage> data;
+    //Storage store;
     int Y1,Y5,Y10,Y50,Y100,Y500,Y1000,Y2000,Y5000,Y10000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_money_set_euro);
-        Button submit = findViewById(R.id.SubmitBudget);
+        setContentView(R.layout.activity_money_set_yen);
+        Button submit = (Button)findViewById(R.id.SubmitBudget_yen);
 
         NumberPicker e1 = findViewById(R.id.yen_1);
         Y1 = e1.getValue();
@@ -61,15 +65,36 @@ public class MoneySet_Yen extends AppCompatActivity {
         NumberPicker e2000 = findViewById(R.id.yen_10000);
         Y10000 = e2000.getValue();
 
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
+                /*
                 store = new Storage(0,0,0,0,0,
                         0,0,0,0,0,
                         0,0,0,0,0,
                         Y1,Y5,Y10,Y50,Y100,
                         Y500,Y1000,Y2000,Y5000,Y10000);
                 data.add(store);
+            }
+
+            */
+                SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+
+                editor.putInt("yen1", Y1);
+                editor.putInt("yen5", Y5);
+                editor.putInt("yen10", Y10);
+                editor.putInt("yen50", Y50);
+                editor.putInt("yen100", Y100);
+                editor.putInt("yen500", Y500);
+                editor.putInt("yen1000", Y1000);
+                editor.putInt("yen5000", Y2000);
+                editor.putInt("yen10000", Y5000);
+                editor.putInt("yen20000", Y10000);
+                editor.apply();
             }
         });
     }
