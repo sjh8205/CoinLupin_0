@@ -1,88 +1,102 @@
 package com.example.sonhyejin.coinlupin_0;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ShowMeTheMoney_Yen extends AppCompatActivity {
 
-    TextView Total_Money;
-    TextView YCoin1,YCoin2,YCoin3, YCoin4,YCoin5,YCoin6,YCoin7,YCoin8,YCoin9,YCoin10;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_me_the_money_yen);
 
-        SharedPreferences sp = getSharedPreferences("shared",MODE_PRIVATE);  //string name : shared
-        Float OwnMoney = sp.getFloat("Total_money", Float.parseFloat(""));  //  총 금액 값 key : Total_money
+        TextView Total_Money;
+        TextView YCoin1,YCoin2,YCoin3, YCoin4,YCoin5,YCoin6,YCoin7,YCoin8,YCoin9,YCoin10;
+
+        Button gotoReset = (Button) findViewById(R.id.resetB);
+        Button gotoPay = (Button) findViewById(R.id.payB);
+        Button gotoEdit = (Button) findViewById(R.id.editB);
+
+        SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
+        Float OwnMoney = shared.getFloat("Total_money", -1);  //  총 금액 값 key : Total_money
         Total_Money = (TextView)findViewById(R.id.Total_Money);
-        Total_Money.setText("Total_money");  // SharedPreference에 저장되어있는 값 Total_money 출력
+        Total_Money.setText(Float.toString(OwnMoney));  // SharedPreference에 저장되어있는 값 Total_money 출력
 
-        int Ycoin1 = sp.getInt("Ycoin1", Integer.parseInt("")); // YCoin1 : 엔코인1 (제일 싼 동전)
+        int Ycoin1 = shared.getInt("yen1", -1); // YCoin1 : 엔코인1 (제일 싼 동전)
         YCoin1 = (TextView)findViewById(R.id.HMcoin1);
-        YCoin1.setText("YCoin1");
+        YCoin1.setText(Integer.toString(Ycoin1));
 
-        int Ycoin2 = sp.getInt("Ycoin2", Integer.parseInt("")); // YCoin2 : 엔코인2 (두번째로 싼 동전)
+        int Ycoin2 = shared.getInt("yen5", -1); // YCoin2 : 엔코인2 (두번째로 싼 동전)
         YCoin2 = (TextView)findViewById(R.id.HMcoin2);
-        YCoin2.setText("YCoin2");
+        YCoin2.setText(Integer.toString(Ycoin2));
 
-        int Ycoin3 = sp.getInt("Ycoin3", Integer.parseInt("")); // YCoin3 : 엔코인3 (세번째로 싼 동전)
+        int Ycoin3 = shared.getInt("yen10", -1); // YCoin3 : 엔코인3 (세번째로 싼 동전)
         YCoin3 = (TextView)findViewById(R.id.HMcoin3);
-        YCoin3.setText("YCoin3");
+        YCoin3.setText(Integer.toString(Ycoin3));
 
-        int Ycoin4 = sp.getInt("Ycoin4", Integer.parseInt("")); // YCoin4 : 엔코인4
+        int Ycoin4 = shared.getInt("yen50", -1); // YCoin4 : 엔코인4
         YCoin4 = (TextView)findViewById(R.id.HMcoin4);
-        YCoin4.setText("YCoin4");
+        YCoin4.setText(Integer.toString(Ycoin4));
 
-        int Ycoin5 = sp.getInt("Ycoin5", Integer.parseInt("")); // YCoin5 : 엔코인5
+        int Ycoin5 = shared.getInt("yen100", -1); // YCoin5 : 엔코인5
         YCoin5 = (TextView)findViewById(R.id.HMcoin5);
-        YCoin5.setText("YCoin5");
+        YCoin5.setText(Integer.toString(Ycoin5));
 
-        int Ycoin6 = sp.getInt("Ycoin6", Integer.parseInt("")); // YCoin6 : 엔코인6
+        int Ycoin6 = shared.getInt("yen500", -1); // YCoin6 : 엔코인6
         YCoin6 = (TextView)findViewById(R.id.HMcoin6);
-        YCoin6.setText("YCoin6");
+        YCoin6.setText(Integer.toString(Ycoin6));
 
-        int Ycoin7 = sp.getInt("Ycoin7", Integer.parseInt("")); // YCoin7 : 엔코인7
+        int Ycoin7 = shared.getInt("yen1000", -1); // YCoin7 : 엔코인7
         YCoin7 = (TextView)findViewById(R.id.HMcoin7);
-        YCoin7.setText("YCoin7");
+        YCoin7.setText(Integer.toString(Ycoin7));
 
-        int Ycoin8 = sp.getInt("Ycoin8", Integer.parseInt("")); // YCoin8 : 엔코인8
+        int Ycoin8 = shared.getInt("yen2000", -1); // YCoin8 : 엔코인8
         YCoin8 = (TextView)findViewById(R.id.HMcoin8);
-        YCoin8.setText("YCoin8");
+        YCoin8.setText(Integer.toString(Ycoin8));
 
-        int Ycoin9 = sp.getInt("Ycoin9", Integer.parseInt("")); // YCoin9 : 엔코인9
+        int Ycoin9 = shared.getInt("yen5000", -1); // YCoin9 : 엔코인9
         YCoin9 = (TextView)findViewById(R.id.HMcoin9);
-        YCoin9.setText("YCoin9");
+        YCoin9.setText(Integer.toString(Ycoin9));
 
-        int Ycoin10 = sp.getInt("Ycoin10", Integer.parseInt("")); // YCoin10 : 엔코인10
+        int Ycoin10 = shared.getInt("yen10000", -1); // YCoin10 : 엔코인10
         YCoin10 = (TextView)findViewById(R.id.HMcoin10);
-        YCoin10.setText("YCoin10");
+        YCoin10.setText(Integer.toString(Ycoin10));
+
+        gotoReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Home_ChooseCountry.class);
+                //void Reset_CoinCount();   // reset 함수 ---->
+                startActivity(intent);
+            }
+        });
+
+        gotoEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Edit_Euro.class);
+                startActivity(intent);
+            }
+        });
+
+        gotoPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Pay_Euro.class);
+                //void Reset_CoinCount();   // reset 함수 ---->
+                startActivity(intent);
+            }
+        });
 
     }
 
-    public void onClick(View view) {
-
-        switch (view.getId()) {
-            case R.id.resetB:     //리셋버튼 눌렀을 때 초기화 되기
-                //  void Reset_CoinCount();   // reset 함수 ---->
-                Intent GoCountry = new Intent(this, Home_ChooseCountry.class);
-                startActivity(GoCountry);   //국가 선택 화면으로 연결
-                break;
-
-            case R.id.editB:
-                Intent GoEdit = new Intent(this, Edit_Yen.class);
-                startActivity(GoEdit);  //편집 화면으로 연결
-                break;
-
-            case R.id.payB:
-                Intent GoPay = new Intent(this, Pay_Yen.class);
-                startActivity(GoPay);   //pay 화면으로 연결
-                break;
-        }
-    }
 }
 

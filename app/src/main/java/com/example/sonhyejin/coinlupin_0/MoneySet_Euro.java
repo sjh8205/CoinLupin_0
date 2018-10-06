@@ -1,6 +1,7 @@
 package com.example.sonhyejin.coinlupin_0;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -113,6 +114,9 @@ public class MoneySet_Euro extends AppCompatActivity {
                 editor.putInt("cent20000",E20000);
                 editor.putInt("cent50000",E50000);
                 editor.apply();
+
+                Intent intent = new Intent(MoneySet_Euro.this, ShowMeTheMoney_Euro.class);
+                startActivity(intent);
             }
         });
     }

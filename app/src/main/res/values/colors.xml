@@ -8,4 +8,5 @@
     <color name="SelectedColor">#006469</color>
     <color name="Black">#000000</color>
     <color name="ActionBar">#77ffffff</color>
+    <color name="White">#ffffffff</color>
 </resources>

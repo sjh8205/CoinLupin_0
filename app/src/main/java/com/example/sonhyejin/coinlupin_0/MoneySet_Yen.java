@@ -1,6 +1,7 @@
 package com.example.sonhyejin.coinlupin_0;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -91,10 +92,13 @@ public class MoneySet_Yen extends AppCompatActivity {
                 editor.putInt("yen100", Y100);
                 editor.putInt("yen500", Y500);
                 editor.putInt("yen1000", Y1000);
-                editor.putInt("yen5000", Y2000);
-                editor.putInt("yen10000", Y5000);
-                editor.putInt("yen20000", Y10000);
+                editor.putInt("yen2000", Y2000);
+                editor.putInt("yen5000", Y5000);
+                editor.putInt("yen10000", Y10000);
                 editor.apply();
+
+                Intent intent = new Intent(MoneySet_Yen.this, ShowMeTheMoney_Yen.class);
+                startActivity(intent);
             }
         });
     }

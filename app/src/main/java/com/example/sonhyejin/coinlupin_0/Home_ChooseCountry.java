@@ -42,6 +42,7 @@ public class Home_ChooseCountry extends AppCompatActivity {
                 editor.putInt("cent10000",0);
                 editor.putInt("cent20000",0);
                 editor.putInt("cent50000",0);
+                editor.putFloat("Total_money",0);
                 editor.apply();
             }
         });
@@ -62,9 +63,10 @@ public class Home_ChooseCountry extends AppCompatActivity {
                 editor.putInt("yen100", 0);
                 editor.putInt("yen500", 0);
                 editor.putInt("yen1000", 0);
+                editor.putInt("yen2000", 0);
                 editor.putInt("yen5000", 0);
                 editor.putInt("yen10000", 0);
-                editor.putInt("yen20000", 0);
+                editor.putFloat("Total_money",0);
                 editor.apply();
             }
         });

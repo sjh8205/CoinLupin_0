@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BgColor_Euro">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">        <!-- 수직방향 -->
+        android:layout_height="70dp"
+        android:background="@color/ActionBar"
+        android:layout_marginBottom="10dp">
 
-        <RelativeLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:text="예산 설정"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
 
-            <Button
-                android:id="@+id/resetB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Reset"
-                android:onClick="onClick"  />  <!-- reset버튼 (상단 왼쪽) -->
-
-            <Button
-                android:id="@+id/editB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="Edit"
-                android:onClick="onClick" />   <!-- edit버튼 (상단 오른쪽) -->
-
-        </RelativeLayout>
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,24 +33,20 @@
 
             <TextView
                 android:id="@+id/Total_Money"
-                android:layout_width="272dp"
-                android:layout_height="81dp"
+                android:background="@color/ActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:text="MONEY" />  <!-- 총 보유 금액 보여주는 textview -->
 
-            <ScrollView
-                android:layout_width="330dp"
-                android:layout_height="270dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="20dp">  <!--  -->
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -62,37 +54,40 @@
                         android:layout_marginBottom="15dp">
 
                         <ImageView
+                            android:id="@+id/coin1"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin1"/>
+                            android:baselineAlignBottom="true" />
+
                         <TextView
+                            android:id="@+id/HMcoin1"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin1"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin2"/>
+                            android:baselineAlignBottom="true" />
+
                         <TextView
+                            android:id="@+id/HMcoin2"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin2"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin3"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin3"/>
+                            android:baselineAlignBottom="true" />
+
                         <TextView
+                            android:id="@+id/HMcoin3"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin3"/>
+                            android:layout_height="wrap_content" />
 
                     </LinearLayout>
 
@@ -103,39 +98,40 @@
                         android:layout_marginBottom="15dp">
 
                         <ImageView
+                            android:id="@+id/coin4"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin4"/>
+                            android:baselineAlignBottom="true" />
+
                         <TextView
+                            android:id="@+id/HMcoin4"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin4"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin5"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin5" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin5"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin5"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin6"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin6" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin6"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin6"/>
+                            android:layout_height="wrap_content" />
 
                     </LinearLayout>
 
@@ -145,40 +141,40 @@
                         android:layout_marginBottom="15dp">
 
                         <ImageView
+                            android:id="@+id/coin7"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin7" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin7"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin7"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin8"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin8" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin8"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin8"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin9"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin9" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin9"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin9"/>
+                            android:layout_height="wrap_content" />
 
                     </LinearLayout>
 
@@ -188,40 +184,40 @@
                         android:layout_marginBottom="15dp">
 
                         <ImageView
+                            android:id="@+id/coin10"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin10" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin10"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin10"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin11"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin11" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin11"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin11"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin12"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin12" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin12"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin12"/>
+                            android:layout_height="wrap_content" />
 
                     </LinearLayout>
 
@@ -232,64 +228,84 @@
                         android:layout_marginBottom="15dp">
 
                         <ImageView
+                            android:id="@+id/coin13"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin13" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin13"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin13"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin14"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin14" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin14"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin14"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
+                            android:id="@+id/coin15"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:adjustViewBounds="true"
-                            android:baselineAlignBottom="true"
-                            android:id="@+id/coin15" />
+                            android:baselineAlignBottom="true" />
 
                         <TextView
+                            android:id="@+id/HMcoin15"
                             android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/HMcoin15"/>
+                            android:layout_height="wrap_content" />
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </ScrollView>
 
         </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/resetB"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/ActionBar"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="2dp"
+                android:onClick="onClick"
+                android:text="Reset" />
 
             <Button
                 android:id="@+id/payB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Pay"
-                android:onClick="onClick"/>  <!-- pay버튼 -->
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/ActionBar"
+                android:layout_marginHorizontal="2dp"
+                android:onClick="onClick"
+                android:text="Pay" />
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/editB"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/ActionBar"
+                android:layout_marginHorizontal="2dp"
+                android:onClick="onClick"
+                android:text="Edit" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
+</ScrollView>
