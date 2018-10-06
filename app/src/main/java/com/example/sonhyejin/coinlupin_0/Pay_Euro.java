@@ -27,7 +27,7 @@ public class Pay_Euro extends AppCompatActivity {
         euroDE = (TextView) findViewById(R.id.euroDE);
         eBtn = (Button) findViewById(R.id.eBtn);    //이 버튼 눌렀을 때 다음 페이지로 값(euroIN, euroDE)넘어감
 
-        //intent = new Intent(Pay_Euro.this, Recommend_Euro.class);
+        intent = new Intent(Pay_Euro.this, Recommend_Euro.class);
 
         eBtn.setOnClickListener(new View.OnClickListener() {
             @Override

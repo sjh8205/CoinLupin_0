@@ -11,6 +11,30 @@ import android.widget.TextView;
 
 public class ShowMeTheMoney_Euro extends AppCompatActivity {
 
+    public void Reset_CoinCount(){
+        SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = shared.edit();
+
+        editor.putInt("cent1",0);
+        editor.putInt("cent2",0);
+        editor.putInt("cent5",0);
+        editor.putInt("cent10",0);
+        editor.putInt("cent20",0);
+        editor.putInt("cent50",0);
+        editor.putInt("cent100",0);
+        editor.putInt("cent200",0);
+        editor.putInt("cent500",0);
+        editor.putInt("cent1000",0);
+        editor.putInt("cent2000",0);
+        editor.putInt("cent5000",0);
+        editor.putInt("cent10000",0);
+        editor.putInt("cent20000",0);
+        editor.putInt("cent50000",0);
+        editor.putFloat("Total_money",0);
+        editor.apply();
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +120,7 @@ public class ShowMeTheMoney_Euro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ShowMeTheMoney_Euro.this, Home_ChooseCountry.class);
-                //void Reset_CoinCount();   // reset 함수 ---->
+                Reset_CoinCount();   // reset 함수 ---->
                 startActivity(intent);
             }
         });
@@ -113,7 +137,6 @@ public class ShowMeTheMoney_Euro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ShowMeTheMoney_Euro.this, Pay_Euro.class);
-                //void Reset_CoinCount();   // reset 함수 ---->
                 startActivity(intent);
             }
         });

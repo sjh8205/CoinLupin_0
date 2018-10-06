@@ -61,6 +61,8 @@ public class Recommend_Euro extends AppCompatActivity {
         edit.putInt("E13",E[12]-rE[12]);
         edit.putInt("E14",E[13]-rE[13]);
         edit.putInt("E15",E[14]-rE[14]);
+        //edit.putFloat("Total_money",)////////////////total 갱신 해야함
+        edit.apply();
     }
 
     public void CalculateCoin(int howmuch){ //동전계산 함수, 테스트 후 보완이 필요함
@@ -93,21 +95,21 @@ public class Recommend_Euro extends AppCompatActivity {
         reBtn = (Button) findViewById(R.id.reBtn);
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
 
-        E[0] = shared.getInt("E1", 0);  //값 받음
-        E[1] = shared.getInt("E2", 0);
-        E[2] = shared.getInt("E3", 0);
-        E[3] = shared.getInt("E4", 0);
-        E[4] = shared.getInt("E5", 0);
-        E[5] = shared.getInt("E6", 0);
-        E[6] = shared.getInt("E7", 0);
-        E[7] = shared.getInt("E8", 0);
-        E[8] = shared.getInt("E9", 0);
-        E[9] = shared.getInt("E10", 0);
-        E[10] = shared.getInt("E11", 0);
-        E[11] = shared.getInt("E12", 0);
-        E[12] = shared.getInt("E13", 0);
-        E[13] = shared.getInt("E14", 0);
-        E[14] = shared.getInt("E15", 0);
+        E[0] = shared.getInt("euro1", -1);  //값 받음
+        E[1] = shared.getInt("euro2", -1);
+        E[2] = shared.getInt("euro5", -1);
+        E[3] = shared.getInt("euro10", -1);
+        E[4] = shared.getInt("euro20", -1);
+        E[5] = shared.getInt("euro50", -1);
+        E[6] = shared.getInt("euro100", -1);
+        E[7] = shared.getInt("euro200", -1);
+        E[8] = shared.getInt("euro500", -1);
+        E[9] = shared.getInt("euro1000", -1);
+        E[10] = shared.getInt("euro2000", -1);
+        E[11] = shared.getInt("euro5000", -1);
+        E[12] = shared.getInt("euro10000", -1);
+        E[13] = shared.getInt("euro20000", -1);
+        E[14] = shared.getInt("euro50000", -1);
 
         intent = getIntent();
 
@@ -142,21 +144,21 @@ public class Recommend_Euro extends AppCompatActivity {
         CalculateCoin(eIN*10+eDE);
 
         //동전개수 표시하기
-        pE1.setText(rE[0]);
-        pE2.setText(rE[1]);
-        pE3.setText(rE[2]);
-        pE4.setText(rE[3]);
-        pE5.setText(rE[4]);
-        pE6.setText(rE[5]);
-        pE7.setText(rE[6]);
-        pE8.setText(rE[7]);
-        pE9.setText(rE[8]);
-        pE10.setText(rE[9]);
-        pE11.setText(rE[10]);
-        pE12.setText(rE[11]);
-        pE13.setText(rE[12]);
-        pE14.setText(rE[13]);
-        pE15.setText(rE[14]);
+        pE1.setText(Integer.toString(rE[0]));
+        pE2.setText(Integer.toString(rE[1]));
+        pE3.setText(Integer.toString(rE[2]));
+        pE4.setText(Integer.toString(rE[3]));
+        pE5.setText(Integer.toString(rE[4]));
+        pE6.setText(Integer.toString(rE[5]));
+        pE7.setText(Integer.toString(rE[6]));
+        pE8.setText(Integer.toString(rE[7]));
+        pE9.setText(Integer.toString(rE[8]));
+        pE10.setText(Integer.toString(rE[9]));
+        pE11.setText(Integer.toString(rE[10]));
+        pE12.setText(Integer.toString(rE[11]));
+        pE13.setText(Integer.toString(rE[12]));
+        pE14.setText(Integer.toString(rE[13]));
+        pE15.setText(Integer.toString(rE[14]));
 
         intent = new Intent(Recommend_Euro.this, ShowMeTheMoney_Euro.class);
         reBtn.setOnClickListener(new View.OnClickListener() {

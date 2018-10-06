@@ -11,7 +11,24 @@ import android.widget.TextView;
 
 public class ShowMeTheMoney_Yen extends AppCompatActivity {
 
+    public void Reset_CoinCount(){
+        SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = shared.edit();
 
+        editor.putInt("yen1", 0);
+        editor.putInt("yen5", 0);
+        editor.putInt("yen10", 0);
+        editor.putInt("yen50", 0);
+        editor.putInt("yen100", 0);
+        editor.putInt("yen500", 0);
+        editor.putInt("yen1000", 0);
+        editor.putInt("yen2000", 0);
+        editor.putInt("yen5000", 0);
+        editor.putInt("yen10000", 0);
+        editor.putFloat("Total_money",0);
+        editor.apply();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +91,7 @@ public class ShowMeTheMoney_Yen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ShowMeTheMoney_Yen.this, Home_ChooseCountry.class);
-                //void Reset_CoinCount();   // reset 함수 ---->
+                Reset_CoinCount();   // reset 함수 ---->
                 startActivity(intent);
             }
         });
@@ -91,7 +108,6 @@ public class ShowMeTheMoney_Yen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ShowMeTheMoney_Yen.this, Pay_Euro.class);
-                //void Reset_CoinCount();   // reset 함수 ---->
                 startActivity(intent);
             }
         });
