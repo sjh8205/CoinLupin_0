@@ -95,7 +95,7 @@ public class MoneySet_Yen extends AppCompatActivity {
                 editor.putInt("yen2000", Y2000);
                 editor.putInt("yen5000", Y5000);
                 editor.putInt("yen10000", Y10000);
-                editor.apply();
+                editor.commit();
 
                 Intent intent = new Intent(MoneySet_Yen.this, ShowMeTheMoney_Yen.class);
                 startActivity(intent);
