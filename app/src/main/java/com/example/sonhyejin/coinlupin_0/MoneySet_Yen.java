@@ -46,25 +46,25 @@ public class MoneySet_Yen extends AppCompatActivity {
         Button submit = (Button)findViewById(R.id.SubmitBudget_yen);
 
         NumberPicker e1 = findViewById(R.id.yen_1);
-        Y1 = e1.getValue();
+
         NumberPicker e2 = findViewById(R.id.yen_5);
-        Y5 = e2.getValue();
+
         NumberPicker e5 = findViewById(R.id.yen_10);
-        Y10 = e5.getValue();
+
         NumberPicker e10 = findViewById(R.id.yen_50);
-        Y50 = e10.getValue();
+
         NumberPicker e20 = findViewById(R.id.yen_100);
-        Y100 = e20.getValue();
+
         NumberPicker e50 = findViewById(R.id.yen_500);
-        Y500 = e50.getValue();
+
         NumberPicker e200 = findViewById(R.id.yen_1000);
-        Y1000 = e200.getValue();
+
         NumberPicker e500 = findViewById(R.id.yen_2000);
-        Y2000 = e500.getValue();
+
         NumberPicker e1000 = findViewById(R.id.yen_5000);
-        Y5000 = e1000.getValue();
+
         NumberPicker e2000 = findViewById(R.id.yen_10000);
-        Y10000 = e2000.getValue();
+
 
 
 
@@ -82,6 +82,18 @@ public class MoneySet_Yen extends AppCompatActivity {
             }
 
             */
+
+                Y1 = e1.getValue();
+                Y5 = e2.getValue();
+                Y10 = e5.getValue();
+                Y50 = e10.getValue();
+                Y100 = e20.getValue();
+                Y500 = e50.getValue();
+                Y1000 = e200.getValue();
+                Y2000 = e500.getValue();
+                Y5000 = e1000.getValue();
+                Y10000 = e2000.getValue();
+
                 SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
 

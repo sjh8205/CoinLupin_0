@@ -57,7 +57,7 @@
                 app:np_textColor="@color/DivideColor"
                 app:np_textSize="@dimen/text_size"
                 app:np_typeface="@string/roboto_light"
-                app:np_value="0"
+
                 android:background="@color/ActionBar"/>
 
             <ImageView
