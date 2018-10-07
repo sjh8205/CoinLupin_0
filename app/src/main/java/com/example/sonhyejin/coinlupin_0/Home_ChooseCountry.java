@@ -18,6 +18,11 @@ public class Home_ChooseCountry extends AppCompatActivity {
         Button gotoEurope = (Button)findViewById(R.id.Home_euro);
         Button gotoJapan = (Button)findViewById(R.id.Home_yen);
 
+        SharedPreferences check = getSharedPreferences("login", Context.MODE_PRIVATE);
+        SharedPreferences.Editor move = check.edit();
+
+        move.putInt("FirstorNot",0);
+
         gotoEurope.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,6 +31,8 @@ public class Home_ChooseCountry extends AppCompatActivity {
 
                 SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
+
+                move.putInt("FirstorNot",1);
 
                 editor.putInt("cent1",0);
                 editor.putInt("cent2",0);
@@ -55,6 +62,8 @@ public class Home_ChooseCountry extends AppCompatActivity {
 
                 SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
+
+                move.putInt("FirstorNot",2);
 
                 editor.putInt("yen1", 0);
                 editor.putInt("yen5", 0);

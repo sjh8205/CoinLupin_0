@@ -64,10 +64,6 @@ public class MoneySet_Yen extends AppCompatActivity {
         NumberPicker e1000 = findViewById(R.id.yen_5000);
 
         NumberPicker e2000 = findViewById(R.id.yen_10000);
-
-
-
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
 
