@@ -47,605 +47,645 @@
     </LinearLayout>
 
         <LinearLayout
-            android:layout_width="390dp"
-            android:layout_height="442dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn1"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn1"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <TextView
                     android:id="@+id/Edit1"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn2"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn2"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <TextView
                     android:id="@+id/Edit2"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn3"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn3"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <TextView
                     android:id="@+id/Edit3"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn4"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn4"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <TextView
                     android:id="@+id/Edit4"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn5"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn5"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <TextView
                     android:id="@+id/Edit5"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn6"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn6"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <TextView
                     android:id="@+id/Edit6"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn7"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn7"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <TextView
                     android:id="@+id/Edit7"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn8"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn8"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <TextView
                     android:id="@+id/Edit8"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn9"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn9"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <TextView
                     android:id="@+id/Edit9"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn10"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn10"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"  />
 
                 <TextView
                     android:id="@+id/Edit10"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn11"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn11"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"  />
 
                 <TextView
                     android:id="@+id/Edit11"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn12"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn12"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"  />
 
                 <TextView
                     android:id="@+id/Edit12"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn13"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn13"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"  />
 
                 <TextView
                     android:id="@+id/Edit13"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn14"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn14"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"  />
 
                 <TextView
                     android:id="@+id/Edit14"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"/>
 
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/mBtn15"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/minus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"/>
 
                 <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="60dp"
-                    tools:layout_editor_absoluteX="42dp"
-                    tools:layout_editor_absoluteY="163dp"
-                    tools:ignore="ContentDescription"/>
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"/>
 
                 <Button
                     android:id="@+id/pBtn15"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
                     android:text="@string/plus"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="183dp" />
+                    android:layout_margin="5dp"  />
 
                 <TextView
                     android:id="@+id/Edit15"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="100dp"
+                    android:background="@color/ActionBar"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp" />
 
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/btn_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
+                android:background="@color/ActionBar"
+                android:layout_margin="5dp"
                 android:text="@string/next"
-                android:onClick="btnNext"
-                android:textStyle="bold" />
-
+                android:onClick="btnNext" />
 
         </LinearLayout>
 </LinearLayout>
