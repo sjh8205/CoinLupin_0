@@ -12,4 +12,10 @@
 
     <string name="number_picker_formatter">%02d</string>
 
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="ImageView">ImageView</string>
+    <string name="next">완 료</string>
+    <string name="money">Money</string>
+
 </resources>

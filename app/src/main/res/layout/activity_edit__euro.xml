@@ -1,9 +1,652 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".Edit_Euro">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
 
-</android.support.constraint.ConstraintLayout>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/app_name"
+    android:background="@color/BgColor_Euro"
+    android:orientation="vertical"
+    tools:context=".Edit_Euro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/ActionBar"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="편집"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/Total_Money"
+            android:background="@color/ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="442dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn1"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn1"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit1"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn2"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn2"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit2"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn3"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn3"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit3"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn4"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn4"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit4"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn5"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn5"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit5"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn6"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn6"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit6"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn7"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn7"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit7"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn8"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn8"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit8"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn9"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn9"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit9"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn10"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn10"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit10"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn11"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn11"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit11"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn12"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn12"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit12"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn13"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn13"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit13"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn14"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn14"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit14"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mBtn15"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/minus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="163dp"
+                    tools:ignore="ContentDescription"/>
+
+                <Button
+                    android:id="@+id/pBtn15"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="@string/plus"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <TextView
+                    android:id="@+id/Edit15"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/next"
+                android:onClick="btnNext"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+</LinearLayout>
+</ScrollView>
