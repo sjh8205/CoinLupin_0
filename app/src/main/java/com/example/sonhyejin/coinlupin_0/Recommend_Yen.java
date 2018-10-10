@@ -16,59 +16,50 @@ public class Recommend_Yen extends AppCompatActivity {
     Intent intent;
 
     //동전개수 TextView
-    public TextView pY1;
-    public TextView pY2;
-    public TextView pY3;
-    public TextView pY4;
-    public TextView pY5;
-    public TextView pY6;
-    public TextView pY7;
-    public TextView pY8;
-    public TextView pY9;
-    public TextView pY10;
-
-    SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
-    Home_ChooseCountry hc = new Home_ChooseCountry();   //만들어진 SP를 사용하기 위해 객체 선언
-
-//    int Y1,Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9, Y10;    //SP에서 가져다 쓸 것임
-//    int rY1, rY2, rY3, rY4, rY5, rY6, rY7, rY8, rY9, rY10;    //추천 동전 개수
+    public TextView pY1, pY2, pY3, pY4, pY5, pY6, pY7, pY8, pY9, pY10;
 
     //설계문서와 변수 선언 다름
     int[] Y = new int[10];  //동전개수, SP에서 가져다 쓸 것임, for문을 돌리기 위해 변경
     int[] Y2 = {1, 5, 10, 50, 100, 500, 1000, 2000, 5000, 10000};    //해당 동전 액수
     int[] rY = new int[10]; //추천 동전 개수
 
-    public void Update_CointCount() {    //설계문서와 인수 설정이 다를 듯 함
+    public void Update_CoinCount() {    //설계문서와 인수 설정이 다를 듯 함
         //SP의 값을 갱신해야함
+        SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = shared.edit();
-        edit.putInt("Y1", Y[0] - rY[0]);
-        edit.putInt("Y2", Y[1] - rY[1]);
-        edit.putInt("Y3", Y[2] - rY[2]);
-        edit.putInt("Y4", Y[3] - rY[3]);
-        edit.putInt("Y5", Y[4] - rY[4]);
-        edit.putInt("Y6", Y[5] - rY[5]);
-        edit.putInt("Y7", Y[6] - rY[6]);
-        edit.putInt("Y8", Y[7] - rY[7]);
-        edit.putInt("Y9", Y[8] - rY[8]);
-        edit.putInt("E10", Y[9] - rY[9]);
+        edit.putInt("yen1", Y[0] - rY[0]);
+        edit.putInt("yen5", Y[1] - rY[1]);
+        edit.putInt("yen10", Y[2] - rY[2]);
+        edit.putInt("yen50", Y[3] - rY[3]);
+        edit.putInt("yen100", Y[4] - rY[4]);
+        edit.putInt("yen500", Y[5] - rY[5]);
+        edit.putInt("yen1000", Y[6] - rY[6]);
+        edit.putInt("yen2000", Y[7] - rY[7]);
+        edit.putInt("yen5000", Y[8] - rY[8]);
+        edit.putInt("yen10000", Y[9] - rY[9]);
+        edit.apply();
     }
 
     public void CalculateCoin(int howmuch) { //동전계산 함수, 테스트 후 보완이 필요함
-        for (int i = 0; i < 10; i++) {
-            if (howmuch - Y[i] * Y2[i] > 0) {    //양의 값
-                howmuch -= Y[i] * Y2[i];
+        for(int i=0; i<15; i++){
+            if(Y[i] == 0){  //동전 없음
                 rY[i] = Y[i];
-            } else if (howmuch == Y[i] * Y2[i]) {    //잔액이 0이 될 떄
-                howmuch -= Y[i] * Y2[i];
-                rY[i] = Y[i];
-                break;
-            } else {
-                for (int j = 0; j < Y[i]; j++) {
-                    howmuch -= Y2[i];
-                    if (howmuch < 0)
-                        rY[i] = j;
-                    //잔돈 나오는거....생각해서 잔돈에 해당하는거 더해줘야져
+            }else if(howmuch > 0){  //동전 있고, 지불 금액 남음
+                if(howmuch >= Y[i]*Y2[i]){  //해당 동전을 전부 사용 가능하면
+                    rY[i] = Y[i];
+                    howmuch -= Y[i]*Y2[i];
+                }else{  //해당 동전 일부만 내야 하면
+                    for(int j=0; j<Y[i]; j++){
+                        howmuch -= Y2[i];
+                        if(howmuch<= 0){
+                            rY[i] = j+1;
+                            //j=E[i];
+                            break;
+                        }
+                    }
                 }
+            }else{  //지불 금액 안 남음
+                rY[i] = 0;
             }
         }
     }
@@ -78,26 +69,25 @@ public class Recommend_Yen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommend__yen);
 
-        ryBtn = (Button) findViewById(R.id.ryBtn);
+        ryBtn = (Button) findViewById(R.id.ryBtn);  //버튼 객체를 레이아웃과 연결
 
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
-        Home_ChooseCountry hc = new Home_ChooseCountry();   //만들어진 SP를 사용하기 위해 객체 선언, SP최초로 선언해준 java파일 이름으로 대체하면 됨
-        Y[0] = shared.getInt("Y1", 0);  //값 받음
-        Y[1] = shared.getInt("Y2", 0);
-        Y[2] = shared.getInt("Y3", 0);
-        Y[3] = shared.getInt("Y4", 0);
-        Y[4] = shared.getInt("Y5", 0);
-        Y[5] = shared.getInt("Y6", 0);
-        Y[6] = shared.getInt("Y7", 0);
-        Y[7] = shared.getInt("Y8", 0);
-        Y[8] = shared.getInt("Y9", 0);
-        Y[9] = shared.getInt("Y10", 0);
+        Y[0] = shared.getInt("yen1", 0);  //값 받음
+        Y[1] = shared.getInt("yen5", 0);
+        Y[2] = shared.getInt("yen10", 0);
+        Y[3] = shared.getInt("yen50", 0);
+        Y[4] = shared.getInt("yen100", 0);
+        Y[5] = shared.getInt("yen500", 0);
+        Y[6] = shared.getInt("yen1000", 0);
+        Y[7] = shared.getInt("yen2000", 0);
+        Y[8] = shared.getInt("yen5000", 0);
+        Y[9] = shared.getInt("yen10000", 0);
 
         intent = getIntent();
 
-        int y = intent.getIntExtra("y", 0);
+        int y = intent.getIntExtra("y", 0); //Pay화면에서 키값 'y'로 값 전달 받기
 
-        payYen = (TextView) findViewById(R.id.payYen);
+        payYen = (TextView) findViewById(R.id.payYen);    //총액 표시 텍스트 뷰 연결
         //동전 텍스트 뷰랑 연결시키기
         pY1 = (TextView) findViewById(R.id.RYcoin1);
         pY2 = (TextView) findViewById(R.id.RYcoin2);
@@ -115,9 +105,7 @@ public class Recommend_Yen extends AppCompatActivity {
 
         payYen.setText(y2); //총액표시
 
-        //넘어온 화폐 개수 받기
-        //화폐 개수대로...
-        CalculateCoin(y);
+        CalculateCoin(y); //추천 동전 개수 계산 함수 호출
 
         //동전개수 표시하기
         pY1.setText(rY[0]);
@@ -135,10 +123,9 @@ public class Recommend_Yen extends AppCompatActivity {
         ryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.putExtra("y", y); //필요없나...?
 
                 //계산된 각 화폐 개수들 넘겨주기
-                Update_CointCount();
+                Update_CoinCount();
 
                 startActivity(intent);
             }
