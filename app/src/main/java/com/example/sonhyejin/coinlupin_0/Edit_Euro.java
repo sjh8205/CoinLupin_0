@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Edit_Euro extends AppCompatActivity {
 
-    /*
+
     TextView Total_Money;
 
     Button mBtn1, pBtn1, mBtn2, pBtn2, mBtn3, pBtn3,
@@ -20,289 +21,500 @@ public class Edit_Euro extends AppCompatActivity {
             mBtn10, pBtn10, mBtn11, pBtn11, mBtn12, pBtn12,
             mBtn13, pBtn13, mBtn14, pBtn14, mBtn15, pBtn15; //mBtn = -버튼, pBtn = +버튼
 
-    int Ecoin1, Ecoin2, Ecoin3, Ecoin4, Ecoin5, Ecoin6, Ecoin7, Ecoin8,
-            Ecoin9, Ecoin10, Ecoin11, Ecoin12, Ecoin13, Ecoin14, Ecoin15; //동전 개수 sp 에서 가져올거
+    Button ok;//완료 버튼
+
+    int EEcoin1, EEcoin2, EEcoin3, EEcoin4, EEcoin5, EEcoin6, EEcoin7, EEcoin8,
+            EEcoin9, EEcoin10, EEcoin11, EEcoin12, EEcoin13, EEcoin14, EEcoin15; //동전 개수 sp 에서 가져올거
 
     TextView Edit1, Edit2, Edit3, Edit4, Edit5, Edit6, Edit7,
             Edit8, Edit9, Edit10, Edit11, Edit12, Edit13, Edit14, Edit15; //edit 된 동전개수
 
-    int E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15;
-
     float OwnMoney;
 
-
-    //+, - 버튼 누르기
-    Button.OnClickListener listener = new Button.OnClickListener()
-    {
-        public void onClick(View v)
-        {
-            switch(v.getId()){
-                case R.id.mBtn1:
-                    E1 = Ecoin1 -1;
-                    break;
-                case R.id.pBtn1:
-                    E1  = Ecoin1 +1;
-                    break;
-                case R.id.mBtn2:
-                    E2  = Ecoin2 -1;
-                    break;
-                case R.id.pBtn2:
-                    E2 = Ecoin2 +1;
-                    break;
-                case R.id.mBtn3:
-                    E3  = Ecoin3 -1;
-                    break;
-                case R.id.pBtn3:
-                    E3  = Ecoin3 +1;
-                    break;
-                case R.id.mBtn4:
-                    E4 = Ecoin4 -1;
-                    break;
-                case R.id.pBtn4:
-                    E4 = Ecoin4 +1;
-                    break;
-                case R.id.mBtn5:
-                    E5 = Ecoin5 -1;
-                    break;
-                case R.id.pBtn5:
-                    E5  = Ecoin5 +1;
-                    break;
-                case R.id.mBtn6:
-                    E6  = Ecoin6 -1;
-                    break;
-                case R.id.pBtn6:
-                    E6  = Ecoin6 +1;
-                    break;
-                case R.id.mBtn7:
-                    E7 = Ecoin7 -1;
-                    break;
-                case R.id.pBtn7:
-                    E7  = Ecoin7 +1;
-                    break;
-                case R.id.mBtn8:
-                    E8 = Ecoin8 -1;
-                    break;
-                case R.id.pBtn8:
-                    E8 = Ecoin8 +1;
-                    break;
-                case R.id.mBtn9:
-                    E9 = Ecoin9 -1;
-                    break;
-                case R.id.pBtn9:
-                    E9 = Ecoin9 +1;
-                    break;
-                case R.id.mBtn10:
-                    E10  = Ecoin10 -1;
-                    break;
-                case R.id.pBtn10:
-                    E10 = Ecoin10 +1;
-                    break;
-                case R.id.mBtn11:
-                    E11  = Ecoin10 -1;
-                    break;
-                case R.id.pBtn11:
-                    E11  = Ecoin11 +1;
-                    break;
-                case R.id.mBtn12:
-                    E12  = Ecoin12 -1;
-                    break;
-                case R.id.pBtn12:
-                    E12 = Ecoin12 +1;
-                    break;
-                case R.id.mBtn13:
-                    E13 = Ecoin13 -1;
-                    break;
-                case R.id.pBtn13:
-                    E13 = Ecoin13 +1;
-                    break;
-                case R.id.mBtn14:
-                    E14  = Ecoin14 -1;
-                    break;
-                case R.id.pBtn14:
-                    E14 = Ecoin14 +1;
-                    break;
-                case R.id.mBtn15:
-                    E15  = Ecoin5 -1;
-                    break;
-                case R.id.pBtn15:
-                    E15 = Ecoin5 +1;
-                    break;
-            }
-
-        }
-
-    };
-    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit__euro);
 
-/*
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
 
-        OwnMoney = sp.getFloat("Total_money", Float.parseFloat(""));
-        OwnMoney += ((E1*0.01)+(E2*0.02)+(E3*0.05)+(E4*0.1)+(E5*0.2)+(E6*0.5)+E7+(E8*2)+(E9*5)+(E10*10)+(E11*20)+(E12*50)+(E13*100)+(E14*200)+(E15*500)); //edit 한 동전개수를 총 잔액에 더함
-        Total_Money = findViewById(R.id.Total_Money);
-        Total_Money.setText(Float.toString(OwnMoney));
+        //OwnMoney = sp.getFloat("Total_money", 0);
+        Total_Money = (TextView) findViewById(R.id.Total_Money);
 
 
         //sp 에서 동전 개수(Ecoin) 불러오기
-        Ecoin1 = sp.getInt("Ecoin1",0);
-        Ecoin2 = sp.getInt("Ecoin2",0);
-        Ecoin3 = sp.getInt("Ecoin3",0);
-        Ecoin4 = sp.getInt("Ecoin4",0);
-        Ecoin5 = sp.getInt("Ecoin5",0);
-        Ecoin6 = sp.getInt("Ecoin6",0);
-        Ecoin7 = sp.getInt("Ecoin7",0);
-        Ecoin8 = sp.getInt("Ecoin8",0);
-        Ecoin9 = sp.getInt("Ecoin9",0);
-        Ecoin10 = sp.getInt("Ecoin10",0);
-        Ecoin11 = sp.getInt("Ecoin11",0);
-        Ecoin12 = sp.getInt("Ecoin12",0);
-        Ecoin13 = sp.getInt("Ecoin13",0);
-        Ecoin14 = sp.getInt("Ecoin14",0);
-        Ecoin15 = sp.getInt("Ecoin15",0);
+        // Edit에 받아야되는데 int 라서 일단 EEcoin에 받음
+        EEcoin1 = sp.getInt("cent1", 0);
+        EEcoin2 = sp.getInt("cent2", 0);
+        EEcoin3 = sp.getInt("cent5", 0);
+        EEcoin4 = sp.getInt("cent10", 0);
+        EEcoin5 = sp.getInt("cent20", 0);
+        EEcoin6 = sp.getInt("cent50", 0);
+        EEcoin8 = sp.getInt("cent200", 0);
+        EEcoin9 = sp.getInt("cent500", 0);
+        EEcoin10 = sp.getInt("cent1000", 0);
+        EEcoin11 = sp.getInt("cent2000", 0);
+        EEcoin12 = sp.getInt("cent5000", 0);
+        EEcoin13 = sp.getInt("cent10000", 0);
+        EEcoin14 = sp.getInt("cent20000", 0);
+        EEcoin15 = sp.getInt("cent50000", 0);
 
 
+//-, +버튼 동작
         mBtn1 = findViewById(R.id.mBtn1);
-        mBtn1.setOnClickListener(listener);
-        pBtn1 = findViewById(R.id.pBtn1);
-        pBtn1.setOnClickListener(listener);
+        Edit1 = (TextView) findViewById(R.id.Edit1);
+        mBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin1 -= 1;
+                Edit1.setText(Integer.toString(EEcoin1));//String 값으로 바꿔서 Edit에 대입
+                OwnMoney += EEcoin1 * 0.01;//동전개수에서 동전 가격으로 바꿔서 총 금액에 합산해줌
+                if (EEcoin1 < 0) {//입력범위 초과한 경우 오류메세지 띄움
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
 
+            }
+        });
+
+        pBtn1 = findViewById(R.id.pBtn1);
+        Edit1 = (TextView) findViewById(R.id.Edit1);
+        pBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin1 += 1;
+                Edit1.setText(Integer.toString(EEcoin1));
+                OwnMoney += EEcoin1 * 0.01;
+                if (EEcoin1 > 20) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn2 = findViewById(R.id.mBtn2);
-        mBtn2.setOnClickListener(listener);
+        Edit2 = findViewById(R.id.Edit2);
+        mBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin2 -= 1;
+                Edit2.setText(Integer.toString(EEcoin2));
+                OwnMoney += EEcoin2 * 0.02;
+                if (EEcoin2 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn2 = findViewById(R.id.pBtn2);
-        pBtn2.setOnClickListener(listener);
+        Edit2 = findViewById(R.id.Edit2);
+        pBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin2 += 1;
+                Edit2.setText(Integer.toString(EEcoin2));
+                OwnMoney += EEcoin2 * 0.02;
+                if (EEcoin2 > 20) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn3 = findViewById(R.id.mBtn3);
-        mBtn3.setOnClickListener(listener);
+        Edit3 = findViewById(R.id.Edit3);
+        mBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin3 -= 1;
+                Edit3.setText(Integer.toString(EEcoin3));
+                OwnMoney += EEcoin3 * 0.05;
+                if (EEcoin3 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn3 = findViewById(R.id.pBtn3);
-        pBtn3.setOnClickListener(listener);
+        Edit3 = findViewById(R.id.Edit3);
+        pBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin3 += 1;
+                Edit3.setText(Integer.toString(EEcoin3));
+                OwnMoney += EEcoin3 * 0.05;
+                if (EEcoin3 > 20) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn4 = findViewById(R.id.mBtn4);
-        mBtn4.setOnClickListener(listener);
+        Edit4 = findViewById(R.id.Edit4);
+        mBtn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin4 -= 1;
+                Edit4.setText(Integer.toString(EEcoin4));
+                OwnMoney += EEcoin4 * 0.1;
+                if (EEcoin4 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn4 = findViewById(R.id.pBtn4);
-        pBtn4.setOnClickListener(listener);
+        Edit4 = findViewById(R.id.Edit4);
+        pBtn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin4 += 1;
+                Edit4.setText(Integer.toString(EEcoin4));
+                OwnMoney += EEcoin4 * 0.1;
+                if (EEcoin4 > 20) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn5 = findViewById(R.id.mBtn5);
-        mBtn5.setOnClickListener(listener);
+        Edit5 = findViewById(R.id.Edit5);
+        mBtn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin5 -= 1;
+                Edit5.setText(Integer.toString(EEcoin5));
+                OwnMoney += EEcoin5 * 0.2;
+                if (EEcoin5 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn5 = findViewById(R.id.pBtn5);
-        pBtn5.setOnClickListener(listener);
+        Edit5 = findViewById(R.id.Edit5);
+        pBtn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin5 += 1;
+                Edit5.setText(Integer.toString(EEcoin5));
+                OwnMoney += EEcoin5 * 0.2;
+                if (EEcoin5 > 20) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn6 = findViewById(R.id.mBtn6);
-        mBtn6.setOnClickListener(listener);
+        Edit6 = findViewById(R.id.Edit6);
+        mBtn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin6 -= 1;
+                Edit6.setText(Integer.toString(EEcoin6));
+                OwnMoney += EEcoin6 * 0.5;
+                if (EEcoin6 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn6 = findViewById(R.id.pBtn6);
-        pBtn6.setOnClickListener(listener);
+        Edit6 = findViewById(R.id.Edit6);
+        pBtn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin6 += 1;
+                Edit6.setText(Integer.toString(EEcoin6));
+                OwnMoney += EEcoin6 * 0.5;
+                if (EEcoin6 > 20) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn7 = findViewById(R.id.mBtn7);
-        mBtn7.setOnClickListener(listener);
+        Edit7 = findViewById(R.id.Edit7);
+        mBtn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin7 -= 1;
+                Edit7.setText(Integer.toString(EEcoin7));
+                OwnMoney += EEcoin7;
+                if (EEcoin7 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn7 = findViewById(R.id.pBtn7);
-        pBtn7.setOnClickListener(listener);
+        Edit7 = findViewById(R.id.Edit7);
+        pBtn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin7 += 1;
+                Edit7.setText(Integer.toString(EEcoin7));
+                OwnMoney += EEcoin7;
+                if (EEcoin7 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn8 = findViewById(R.id.mBtn8);
-        mBtn8.setOnClickListener(listener);
+        Edit8 = findViewById(R.id.Edit8);
+        mBtn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin8 -= 1;
+                Edit8.setText(Integer.toString(EEcoin8));
+                OwnMoney += EEcoin8 * 2;
+                if (EEcoin8 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn8 = findViewById(R.id.pBtn8);
-        pBtn8.setOnClickListener(listener);
+        Edit8 = findViewById(R.id.Edit8);
+        pBtn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin8 += 1;
+                Edit8.setText(Integer.toString(EEcoin8));
+                OwnMoney += EEcoin8 * 2;
+                if (EEcoin8 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn9 = findViewById(R.id.mBtn9);
-        mBtn9.setOnClickListener(listener);
+        Edit9 = findViewById(R.id.Edit9);
+        mBtn9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin9 -= 1;
+                Edit9.setText(Integer.toString(EEcoin9));
+                OwnMoney += EEcoin9 * 5;
+                if (EEcoin9 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn9 = findViewById(R.id.pBtn9);
-        pBtn9.setOnClickListener(listener);
+        Edit9 = findViewById(R.id.Edit9);
+        pBtn9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin9 += 1;
+                Edit9.setText(Integer.toString(EEcoin9));
+                OwnMoney += EEcoin9 * 5;
+                if (EEcoin9 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn10 = findViewById(R.id.mBtn10);
-        mBtn10.setOnClickListener(listener);
+        Edit10 = findViewById(R.id.Edit10);
+        mBtn10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin10 -= 1;
+                Edit10.setText(Integer.toString(EEcoin10));
+                OwnMoney += EEcoin10 * 10;
+                if (EEcoin10 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn10 = findViewById(R.id.pBtn10);
-        pBtn10.setOnClickListener(listener);
+        Edit10 = findViewById(R.id.Edit10);
+        pBtn10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin10 += 1;
+                Edit10.setText(Integer.toString(EEcoin10));
+                OwnMoney += EEcoin10 * 10;
+                if (EEcoin10 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn11 = findViewById(R.id.mBtn11);
-        mBtn11.setOnClickListener(listener);
+        Edit11 = findViewById(R.id.Edit11);
+        mBtn11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin11 -= 1;
+                Edit11.setText(Integer.toString(EEcoin11));
+                OwnMoney += EEcoin11 * 20;
+                if (EEcoin11 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn11 = findViewById(R.id.pBtn11);
-        pBtn11.setOnClickListener(listener);
+        Edit11 = findViewById(R.id.Edit11);
+        pBtn11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin11 += 1;
+                Edit11.setText(Integer.toString(EEcoin11));
+                OwnMoney += EEcoin11 * 20;
+                if (EEcoin11 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn12 = findViewById(R.id.mBtn12);
-        mBtn12.setOnClickListener(listener);
+        Edit12 = findViewById(R.id.Edit12);
+        mBtn12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin12 -= 1;
+                Edit12.setText(Integer.toString(EEcoin12));
+                OwnMoney += EEcoin12 * 50;
+                if (EEcoin12 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn12 = findViewById(R.id.pBtn12);
-        pBtn12.setOnClickListener(listener);
+        Edit12 = findViewById(R.id.Edit12);
+        pBtn12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin12 += 1;
+                Edit12.setText(Integer.toString(EEcoin12));
+                OwnMoney += EEcoin12 * 50;
+                if (EEcoin12 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn13 = findViewById(R.id.mBtn13);
-        mBtn13.setOnClickListener(listener);
+        Edit13 = findViewById(R.id.Edit13);
+        mBtn13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin13 -= 1;
+                Edit13.setText(Integer.toString(EEcoin13));
+                OwnMoney += EEcoin13 * 100;
+                if (EEcoin13 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn13 = findViewById(R.id.pBtn13);
-        pBtn13.setOnClickListener(listener);
+        Edit13 = findViewById(R.id.Edit13);
+        pBtn13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin13 += 1;
+                Edit13.setText(Integer.toString(EEcoin13));
+                OwnMoney += EEcoin13 * 100;
+                if (EEcoin13 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn14 = findViewById(R.id.mBtn14);
-        mBtn14.setOnClickListener(listener);
+        Edit14 = findViewById(R.id.Edit14);
+        mBtn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin14 -= 1;
+                Edit14.setText(Integer.toString(EEcoin14));
+                OwnMoney += EEcoin14 * 200;
+                if (EEcoin14 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         pBtn14 = findViewById(R.id.pBtn14);
-        pBtn14.setOnClickListener(listener);
+        Edit14 = findViewById(R.id.Edit14);
+        pBtn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin14 += 1;
+                Edit14.setText(Integer.toString(EEcoin14));
+                OwnMoney += EEcoin14 * 200;
+                if (EEcoin14 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         mBtn15 = findViewById(R.id.mBtn15);
-        mBtn15.setOnClickListener(listener);
-        pBtn15 = findViewById(R.id.pBtn15);
-        pBtn15.setOnClickListener(listener);
-
-        Edit1 = findViewById(R.id.Edit1);
-        Edit2 = findViewById(R.id.Edit2);
-        Edit3 = findViewById(R.id.Edit3);
-        Edit4 = findViewById(R.id.Edit4);
-        Edit5 = findViewById(R.id.Edit5);
-        Edit6 = findViewById(R.id.Edit6);
-        Edit7 = findViewById(R.id.Edit7);
-        Edit8 = findViewById(R.id.Edit8);
-        Edit9 = findViewById(R.id.Edit9);
-        Edit10 = findViewById(R.id.Edit10);
-        Edit11 = findViewById(R.id.Edit11);
-        Edit12 = findViewById(R.id.Edit12);
-        Edit13 = findViewById(R.id.Edit13);
-        Edit14 = findViewById(R.id.Edit14);
         Edit15 = findViewById(R.id.Edit15);
+        mBtn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin15 -= 1;
+                Edit15.setText(Integer.toString(EEcoin15));
+                OwnMoney += EEcoin15 * 500;
+                if (EEcoin15 < 0) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
+        pBtn15 = findViewById(R.id.pBtn15);
+        Edit15 = findViewById(R.id.Edit15);
+        pBtn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EEcoin15 += 1;
+                Edit15.setText(Integer.toString(EEcoin15));
+                OwnMoney += EEcoin15 * 500;
+                if (EEcoin15 > 30) {
+                    Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
-        Edit1.setText(Integer.toString(E1));
-        Edit2.setText(Integer.toString(E2));
-        Edit3.setText(Integer.toString(E3));
-        Edit4.setText(Integer.toString(E4));
-        Edit5.setText(Integer.toString(E5));
-        Edit6.setText(Integer.toString(E6));
-        Edit7.setText(Integer.toString(E7));
-        Edit8.setText(Integer.toString(E8));
-        Edit9.setText(Integer.toString(E9));
-        Edit10.setText(Integer.toString(E10));
-        Edit11.setText(Integer.toString(E11));
-        Edit12.setText(Integer.toString(E12));
-        Edit13.setText(Integer.toString(E13));
-        Edit14.setText(Integer.toString(E14));
-        Edit15.setText(Integer.toString(E15));
-        */
-    }
-/*
+        Total_Money.setText(Float.toString(OwnMoney));
 
-    public void btnNext(View v)
-    {
-        //다음화면으로 넘어가는거
-
-        SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = shared.edit();
-
-        editor.putInt("Edit1", E1);
-        editor.putInt("Edit2", E2);
-        editor.putInt("Edit3", E3);
-        editor.putInt("Edit4", E4);
-        editor.putInt("Edit5", E5);
-        editor.putInt("Edit6", E6);
-        editor.putInt("Edit7", E7);
-        editor.putInt("Edit8", E8);
-        editor.putInt("Edit9", E9);
-        editor.putInt("Edit10", E10);
-        editor.putInt("Edit11", E11);
-        editor.putInt("Edit12", E12);
-        editor.putInt("Edit13", E13);
-        editor.putInt("Edit14", E14);
-        editor.putInt("Edit15", E15);
-        editor.putFloat("Total_Money", OwnMoney);
+        ok = findViewById(R.id.btn_next);
 
         Intent NextPay = new Intent(this, ShowMeTheMoney_Euro.class);
-        startActivity(NextPay);
-    }*/
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {//편집한 값 sp에 저장
+                SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+
+                editor.putInt("cent1", EEcoin1);
+                editor.putInt("cent2", EEcoin2);
+                editor.putInt("cent5", EEcoin3);
+                editor.putInt("cent10", EEcoin4);
+                editor.putInt("cent20", EEcoin5);
+                editor.putInt("cent50", EEcoin6);
+                editor.putInt("cent100", EEcoin7);
+                editor.putInt("cent200", EEcoin8);
+                editor.putInt("cent500", EEcoin9);
+                editor.putInt("cent1000", EEcoin10);
+                editor.putInt("cent2000", EEcoin11);
+                editor.putInt("cent5000", EEcoin12);
+                editor.putInt("cent10000", EEcoin13);
+                editor.putInt("cent20000", EEcoin14);
+                editor.putInt("cent50000", EEcoin15);
+                editor.putFloat("Total_Money", OwnMoney);
+
+                editor.apply();
+
+                startActivity(NextPay);
+            }
+        });
+    }
 }
