@@ -13,12 +13,11 @@ public class SplashActivity extends AppCompatActivity {
 
         try{
             Thread.sleep(2000);
+            //2초간 정지
         }
         catch(InterruptedException e){
             e.printStackTrace();
         }
-
-
 
         SharedPreferences check = getSharedPreferences("login", Context.MODE_PRIVATE);
         int checked = check.getInt("FirstorNot",0);
@@ -33,5 +32,6 @@ public class SplashActivity extends AppCompatActivity {
             startActivity(new Intent(this,Home_ChooseCountry.class));
             finish();
         }
+        //SharedPreference 값을 받아와 화면전환
     }
 }
