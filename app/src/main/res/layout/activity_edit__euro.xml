@@ -1,692 +1,718 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:contentDescription="@string/app_name"
-    android:background="@color/BgColor_Euro"
-    android:orientation="vertical"
-    tools:context=".Edit_Euro">
 
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/ActionBar"
-        android:layout_marginBottom="10dp">
+        android:layout_height="match_parent"
+        android:background="@color/BgColor_Euro"
+        android:contentDescription="@string/app_name"
+        android:orientation="vertical"
+        tools:context=".Edit_Euro">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="편집"
-            android:textSize="25sp"
-            android:textAlignment="center"
-            android:gravity="center"/>
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/ActionBar">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="편집"
+                android:textAlignment="center"
+                android:textSize="25sp" />
 
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/Total_Money"
-            android:background="@color/ActionBar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"/>
-    </LinearLayout>
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            //사용자의 현재 보유 금액을 보여준다.
+
+            <TextView
+                android:id="@+id/Total_Money"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/ActionBar"
+                android:gravity="center" />
+        </LinearLayout>
+        //각 화폐 별로 편집 할 수 있는 칸이다.
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            //1센트-----------------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+                //- 버튼을 누르면 맨 오른쪽 TextView에 화폐 개수가 1 감소한다.
 
                 <Button
                     android:id="@+id/mBtn1"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
+                //화폐 이미지를 보여주는 칸이다.
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
+                //+ 버튼을 누르면 맨 오른쪽 TextView에 화폐 개수가 1 증가한다.
 
                 <Button
                     android:id="@+id/pBtn1"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
+                //화폐 별 총 개수를 보여주는 칸이다.
 
                 <TextView
                     android:id="@+id/Edit1"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //2센트----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn2"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn2"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit2"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //5센트----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn3"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn3"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit3"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //10센트----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn4"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn4"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit4"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
-
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
             </LinearLayout>
+            //20센트----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn5"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn5"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit5"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //50센트----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn6"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn6"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit6"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //1유로----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn7"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn7"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit7"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //2유로----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn8"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn8"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit8"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //5유로----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn9"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn9"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit9"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //10유로----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn10"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn10"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"  />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit10"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //20유로----------------------------------------------------
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn11"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn11"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"  />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit11"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //50유로----------------------------------------------------
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn12"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn12"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"  />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit12"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //100유로----------------------------------------------------
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn13"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn13"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"  />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit13"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //200유로----------------------------------------------------
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn14"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn14"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"  />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit14"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //500유로----------------------------------------------------
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/mBtn15"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/minus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center" />
 
                 <Button
                     android:id="@+id/pBtn15"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@color/ActionBar"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/ActionBar"
                     android:text="@string/plus"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"  />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Edit15"
                     android:layout_width="100dp"
-                    android:background="@color/ActionBar"
-                    android:layout_gravity="center"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="50dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/ActionBar" />
 
 
             </LinearLayout>
+            //완료버튼
 
             <Button
                 android:id="@+id/btn_next"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="@color/ActionBar"
                 android:layout_margin="5dp"
-                android:text="@string/next"
-                android:onClick="btnNext" />
+                android:background="@color/ActionBar"
+                android:onClick="btnNext"
+                android:text="@string/next" />
 
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>

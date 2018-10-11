@@ -42,7 +42,7 @@ public class Recommend_Euro extends AppCompatActivity {
     int[] E2 = {1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,20000,50000};   //해당 동전 액수
     int[] rE = new int[15]; //추천동전개수
 
-    public void Update_CointCount(){    //설계문서와 인수 설정이 다를 듯 함
+    public void Update_CoinCount(){    //설계문서와 인수 설정이 다를 듯 함
         //SP의 값을 갱신해야함
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = shared.edit();
@@ -168,7 +168,7 @@ public class Recommend_Euro extends AppCompatActivity {
                 intent.putExtra("eDE",eDE);
 
                 //계산된 각 화폐 개수들 넘겨주기
-                Update_CointCount();
+                Update_CoinCount();
 
                 startActivity(intent);
             }
