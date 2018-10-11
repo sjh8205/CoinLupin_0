@@ -28,8 +28,8 @@ public class MoneySet_Yen extends AppCompatActivity {
 
     private static String TAG = "NumberPicker";
 
-    /*ArrayList<Storage> data;
-    Storage store;*/
+    //ArrayList<Storage> data;
+    //Storage store;
     //상단의 주석처리 된 코드 : 초기에 sharedpreference를 사용하는 것과 위처럼 storage 객체를 만들어서 사용하는 것 중 더 효율적인 것을 찾기 위해 실행했던 코드_1
 
     int Y1,Y5,Y10,Y50,Y100,Y500,Y1000,Y2000,Y5000,Y10000;

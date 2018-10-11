@@ -4,13 +4,8 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.sonhyejin.coinlupin_0"
-<<<<<<< HEAD
         minSdkVersion 26
         targetSdkVersion 26
-=======
-        minSdkVersion 24
-        targetSdkVersion 24
->>>>>>> b3de9e77c16962979b3bf8220a702658bb77f890
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
