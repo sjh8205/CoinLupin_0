@@ -29,13 +29,16 @@ import java.util.Locale;
 public class MoneySet_Euro extends AppCompatActivity {
 
     private static String TAG = "NumberPicker";
+
     //ArrayList<Storage> data;
     //Storage store;
+
     int E1,E2,E5,E10,E20,E50,E100,E200,E500,E1000,E2000,E5000,E10000,E20000,E50000;
 
     public void Update_CoinCount(int E1, int E2, int E5, int E10, int E20,
                                  int E50, int E100, int E200, int E500, int E1000,
                                  int E2000, int E5000, int E10000, int E20000, int E50000){
+
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = shared.edit();
 
@@ -62,16 +65,12 @@ public class MoneySet_Euro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_set_euro);
 
         Button submit = findViewById(R.id.SubmitBudget_euro);
-
         NumberPicker e1 = (NumberPicker)findViewById(R.id.cent_1);
-        /*E1 = e1.getValue();
-        e1.setValue(0);
-        E1 = 4;
-        E1 = e1.getMaxValue(); */
         NumberPicker e2 = (NumberPicker)findViewById(R.id.cent_2);
         NumberPicker e5 = (NumberPicker)findViewById(R.id.cent_5);
         NumberPicker e10 = (NumberPicker)findViewById(R.id.cent_10);
@@ -86,6 +85,10 @@ public class MoneySet_Euro extends AppCompatActivity {
         NumberPicker e10000 = (NumberPicker)findViewById(R.id.euro_100);
         NumberPicker e20000 = (NumberPicker)findViewById(R.id.euro_200);
         NumberPicker e50000 = (NumberPicker)findViewById(R.id.euro_500);
+        /*E1 = e1.getValue();
+        e1.setValue(0);
+        E1 = 4;
+        E1 = e1.getMaxValue(); */
 
        submit.setOnClickListener(new View.OnClickListener() {
             @Override

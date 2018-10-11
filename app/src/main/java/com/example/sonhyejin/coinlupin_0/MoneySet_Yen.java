@@ -56,6 +56,7 @@ public class MoneySet_Yen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_set_yen);
 
@@ -74,8 +75,8 @@ public class MoneySet_Yen extends AppCompatActivity {
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
-
             public void onClick(View view) {
+
                 /* store = new Storage(0,0,0,0,0,
                         0,0,0,0,0,
                         0,0,0,0,0,
