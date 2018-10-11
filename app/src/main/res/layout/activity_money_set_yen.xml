@@ -5,12 +5,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/BgColor_Euro"
         tools:context=".MoneySet_Euro"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -50,7 +52,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="30"
+                app:np_max="20"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -77,7 +79,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="30"
+                app:np_max="20"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -111,7 +113,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="30"
+                app:np_max="20"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -138,7 +140,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="30"
+                app:np_max="20"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -172,7 +174,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="30"
+                app:np_max="20"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -199,7 +201,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="30"
+                app:np_max="20"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -233,7 +235,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="20"
+                app:np_max="30"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -260,7 +262,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="20"
+                app:np_max="30"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -294,7 +296,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="20"
+                app:np_max="30"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -321,7 +323,7 @@
                 app:np_height="180dp"
                 app:np_dividerColor="@color/DivideColor"
                 app:np_formatter="@string/number_picker_formatter"
-                app:np_max="20"
+                app:np_max="30"
                 app:np_min="0"
                 app:np_selectedTextColor="@color/SelectedColor"
                 app:np_selectedTextSize="@dimen/selected_text_size"
@@ -347,6 +349,9 @@
                 android:background="@color/ActionBar"
                 android:text="확 인"
                 android:textSize="15sp"/>
+
         </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>
