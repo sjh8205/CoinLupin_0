@@ -13,6 +13,7 @@
         tools:context=".MoneySet_Euro"
         android:orientation="vertical">
 
+        <!-- 상단 action bar 구성 LinearLayout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -29,24 +30,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp">
-
-            <TextView
-                android:id="@+id/payEuro"
-                android:background="@color/ActionBar"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="얼마얼마"/>
-
-        </LinearLayout>
-
+        <!-- 각 동전 image와 numberpicker 배치 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="110dp"
@@ -515,6 +499,7 @@
 
         </LinearLayout>
 
+        <!-- 하단의 확인 버튼 구성 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

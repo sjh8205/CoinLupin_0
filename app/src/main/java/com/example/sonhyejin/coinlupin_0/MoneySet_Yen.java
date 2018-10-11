@@ -24,19 +24,24 @@ import com.shawnlin.numberpicker.NumberPicker;
 import java.util.ArrayList;
 import java.util.Locale;
 
-
-
 public class MoneySet_Yen extends AppCompatActivity {
 
     private static String TAG = "NumberPicker";
-    //ArrayList<Storage> data;
-    //Storage store;
+
+    /*ArrayList<Storage> data;
+    Storage store;*/
+    //상단의 주석처리 된 코드 : 초기에 sharedpreference를 사용하는 것과 위처럼 storage 객체를 만들어서 사용하는 것 중 더 효율적인 것을 찾기 위해 실행했던 코드_1
+
     int Y1,Y5,Y10,Y50,Y100,Y500,Y1000,Y2000,Y5000,Y10000;
+    //numberpicker에서 받아온 각 화폐별 개수를 최종저장하는 변수들
 
     public void Update_CoinCount(int Y1,int Y5,int Y10, int Y50, int Y100,
                                  int Y500, int Y1000, int Y2000, int Y5000,int Y10000){
+        //사용자가 선택한 각 화폐별 개수를 SharedPreference에 업데이트하는 함수
+
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = shared.edit();
+        //SharedPreference를 사용하기 위해 선언
 
         editor.putInt("yen1", Y1);
         editor.putInt("yen5", Y5);
@@ -49,9 +54,7 @@ public class MoneySet_Yen extends AppCompatActivity {
         editor.putInt("yen5000", Y5000);
         editor.putInt("yen10000", Y10000);
         editor.commit();
-
-        //Toast.makeText(MoneySet_Yen.this, "score : " + shared.getInt("yen1",-1), Toast.LENGTH_LONG).show();
-        //Toast.makeText(MoneySet_Yen.this, "score : " + Y1, Toast.LENGTH_LONG).show();
+        //SharedPreference 각 키에 해당하는 값 저장하기(편집하기)
     }
 
     @Override
@@ -61,19 +64,22 @@ public class MoneySet_Yen extends AppCompatActivity {
         setContentView(R.layout.activity_money_set_yen);
 
         Button submit = (Button)findViewById(R.id.SubmitBudget_yen);
+        //"SubmitBudget_yen"라는 id를 가진 button을 찾아와 submit으로 선언
 
-        NumberPicker e1 = findViewById(R.id.yen_1);
-        NumberPicker e2 = findViewById(R.id.yen_5);
-        NumberPicker e5 = findViewById(R.id.yen_10);
-        NumberPicker e10 = findViewById(R.id.yen_50);
-        NumberPicker e20 = findViewById(R.id.yen_100);
-        NumberPicker e50 = findViewById(R.id.yen_500);
-        NumberPicker e200 = findViewById(R.id.yen_1000);
-        NumberPicker e500 = findViewById(R.id.yen_2000);
-        NumberPicker e1000 = findViewById(R.id.yen_5000);
-        NumberPicker e2000 = findViewById(R.id.yen_10000);
+        NumberPicker y1 = findViewById(R.id.yen_1);
+        NumberPicker y5 = findViewById(R.id.yen_5);
+        NumberPicker y10 = findViewById(R.id.yen_10);
+        NumberPicker y50 = findViewById(R.id.yen_50);
+        NumberPicker y100 = findViewById(R.id.yen_100);
+        NumberPicker y500 = findViewById(R.id.yen_500);
+        NumberPicker y1000 = findViewById(R.id.yen_1000);
+        NumberPicker y2000 = findViewById(R.id.yen_2000);
+        NumberPicker y5000 = findViewById(R.id.yen_5000);
+        NumberPicker y10000 = findViewById(R.id.yen_10000);
+        //각 id에 해당하는 numberpicker들을 y1~y10000으로 선언
 
         submit.setOnClickListener(new View.OnClickListener() {
+            //submit 버튼을 누르면 해당 구문이 실행
             @Override
             public void onClick(View view) {
 
@@ -83,23 +89,31 @@ public class MoneySet_Yen extends AppCompatActivity {
                         Y1,Y5,Y10,Y50,Y100,
                         Y500,Y1000,Y2000,Y5000,Y10000);
                 data.add(store);} */
+                //상단의 코드 : 초기에 sharedpreference를 사용하는 것과 위처럼 storage 객체를 만들어서 사용하는 것 중 더 효율적인 것을 찾기 위해 실행했던 코드_2
 
-                Y1 = e1.getValue();
-                Y5 = e2.getValue();
-                Y10 = e5.getValue();
-                Y50 = e10.getValue();
-                Y100 = e20.getValue();
-                Y500 = e50.getValue();
-                Y1000 = e200.getValue();
-                Y2000 = e500.getValue();
-                Y5000 = e1000.getValue();
-                Y10000 = e2000.getValue();
+                Y1 = y1.getValue();
+                Y5 = y5.getValue();
+                Y10 = y10.getValue();
+                Y50 = y50.getValue();
+                Y100 = y100.getValue();
+                Y500 = y500.getValue();
+                Y1000 = y1000.getValue();
+                Y2000 = y2000.getValue();
+                Y5000 = y5000.getValue();
+                Y10000 = y10000.getValue();
+                //각 numberpicker에서 선택된 값들을 Y1~Y10000에 저장
+
+                //Toast.makeText(MoneySet_Yen.this, "score : " + shared.getInt("yen1",-1), Toast.LENGTH_LONG).show();
+                //Toast.makeText(MoneySet_Yen.this, "score : " + Y1, Toast.LENGTH_LONG).show();
+                //위의 주석처리된 구문 : 다음 페이지로 값이 잘 넘어가는지 확인하기 위한 toast message를 띄움
 
                 Update_CoinCount(Y1,Y5,Y10,Y50,Y100,
                         Y500,Y1000,Y2000,Y5000,Y10000);
+                //Update_CoinCount함수와 적정 arguments들을 넣어줌으로써 각 동전 개수를 업데이트
 
                 Intent intent = new Intent(MoneySet_Yen.this, ShowMeTheMoney_Yen.class);
                 startActivity(intent);
+                //ShowMeTheMoney_Yen class로 전환
             }
         });
     }
