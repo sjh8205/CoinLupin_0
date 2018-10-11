@@ -24,11 +24,7 @@ public class Recommend_Euro extends AppCompatActivity {
     int[] rE = new int[15]; //추천동전개수
 
     public void Update_CoinCount(){    //설계문서와 인수 설정이 다를 듯 함
-<<<<<<< HEAD
-        //SP의 값을 갱신해야함
-=======
         //SP의 값 갱신
->>>>>>> b3de9e77c16962979b3bf8220a702658bb77f890
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = shared.edit();
         edit.putInt("cent1",E[0]-rE[0]);
