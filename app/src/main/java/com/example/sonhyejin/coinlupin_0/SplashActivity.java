@@ -22,13 +22,13 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences check = getSharedPreferences("login", Context.MODE_PRIVATE);
         int checked = check.getInt("FirstorNot",0);
 
-        if(checked==1){
+        if(checked==1){ //사용자가 europe을 사전에 선택한 경우
             startActivity(new Intent(this,ShowMeTheMoney_Euro.class));
             finish();
-        }else if(checked==2){
+        }else if(checked==2){//사용자가 japan을 사전에 선택한 경우
             startActivity(new Intent(this,ShowMeTheMoney_Yen.class));
             finish();
-        }else {
+        }else {//그 외의 경우
             startActivity(new Intent(this,Home_ChooseCountry.class));
             finish();
         }

@@ -24,6 +24,7 @@ public class Home_ChooseCountry extends AppCompatActivity {
         //화면 전환 SharedPreferences 사용을 위해 선언
 
         move.putInt("FirstorNot",0);
+        move.commit();
         //화면 값 초기화
 
         gotoEurope.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,7 @@ public class Home_ChooseCountry extends AppCompatActivity {
                 //동전 개수 SharedPreferences 사용을 위해 선언
 
                 move.putInt("FirstorNot",1);
+                move.commit();
                 //화면 값 '1'로 셋팅
 
                 editor.putInt("cent1",0);
@@ -71,6 +73,7 @@ public class Home_ChooseCountry extends AppCompatActivity {
                 //동전 개수 SharedPreferences 사용을 위해 선언
 
                 move.putInt("FirstorNot",2);
+                move.commit();
                 //화면 값 '2'로 셋팅
 
                 editor.putInt("yen1", 0);
