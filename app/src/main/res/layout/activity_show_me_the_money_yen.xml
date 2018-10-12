@@ -31,6 +31,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">   <!-- 수직 방향 -->
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp">
+
+                <Button
+                    android:id="@+id/resetB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ActionBar"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="onClick"
+                    android:text="Reset" />
+
+                <Button
+                    android:id="@+id/editB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/ActionBar"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:onClick="onClick"
+                    android:text="Edit" />
+
+            </RelativeLayout>
+
             <TextView
                 android:id="@+id/Total_Money"
                 android:background="@color/ActionBar"
@@ -199,42 +226,20 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/resetB"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@color/ActionBar"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="2dp"
-                android:onClick="onClick"
-                android:text="Reset" />
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/payB"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@color/ActionBar"
-                android:layout_marginHorizontal="2dp"
+                android:layout_centerHorizontal="true"
                 android:onClick="onClick"
                 android:text="Pay" />
 
-            <Button
-                android:id="@+id/editB"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:background="@color/ActionBar"
-                android:layout_marginHorizontal="2dp"
-                android:onClick="onClick"
-                android:text="Edit" />
-
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 </ScrollView>
