@@ -116,9 +116,9 @@ public class ShowMeTheMoney_Euro extends AppCompatActivity {
         ECoin15 = (TextView)findViewById(R.id.HMcoin15);
         ECoin15.setText(Integer.toString(Ecoin15));
 
-        float OwnMoney = (float)((1*Ecoin1) + 2*Ecoin2 + 5*Ecoin3 + Ecoin4*10 + Ecoin5*20
-                + Ecoin6*50 + Ecoin7*100 + Ecoin8*200 + Ecoin9*500 + Ecoin10*1000
-                + Ecoin11*2000 + Ecoin12*5000 + Ecoin13*10000 + Ecoin14*20000 + Ecoin15*50000);  //총 보유금액 OwnMoney에 저장
+        float OwnMoney = (float)((0.01*Ecoin1) + 0.02*Ecoin2 + 0.05*Ecoin3 + Ecoin4*0.10 + Ecoin5*0.2
+                + Ecoin6*0.5 + Ecoin7*1 + Ecoin8*2 + Ecoin9*5 + Ecoin10*10
+                + Ecoin11*20 + Ecoin12*50 + Ecoin13*100 + Ecoin14*200 + Ecoin15*500);  //총 보유금액 OwnMoney에 저장
         Total_Money = (TextView)findViewById(R.id.Total_Money); //id가 Total_Money인 textview ---> 변수 Total_Money라고 선언
         Total_Money.setText(Float.toString(OwnMoney));  //textview에 OwnMoney출력
         edit.putFloat("total_money",OwnMoney);  //총 보유 금액 key 값 : total_money, SharedPreference에 OwnMoney 저장
