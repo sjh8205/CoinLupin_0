@@ -41,11 +41,9 @@ public class MoneySet_Euro extends AppCompatActivity {
                                  int E50, int E100, int E200, int E500, int E1000,
                                  int E2000, int E5000, int E10000, int E20000, int E50000){
         //사용자가 선택한 각 화폐별 개수를 SharedPreference에 업데이트하는 함수
-
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = shared.edit();
         //SharedPreference를 사용하기 위해 선언
-
         editor.putInt("cent1",E1);
         editor.putInt("cent2",E2);
         editor.putInt("cent5",E5);
@@ -67,13 +65,11 @@ public class MoneySet_Euro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_set_euro);
 
         Button submit = findViewById(R.id.SubmitBudget_euro);
         //"SubmitBudget_euro"라는 id를 가진 button을 찾아와 submit으로 선언
-
         NumberPicker e1 = (NumberPicker)findViewById(R.id.cent_1);
         NumberPicker e2 = (NumberPicker)findViewById(R.id.cent_2);
         NumberPicker e5 = (NumberPicker)findViewById(R.id.cent_5);
@@ -102,7 +98,6 @@ public class MoneySet_Euro extends AppCompatActivity {
            //submit 버튼을 누르면 해당 구문이 실행
             @Override
             public void onClick(View view) {
-
                 /*
                 store = new Storage(E1,E2,E5,E10,E20,
                         E50,E100,E200,E500,E1000,

@@ -14,34 +14,32 @@ public class Recommend_Euro extends AppCompatActivity {
     public Button reBtn;
     public TextView payEuro;
     Intent intent;
-
     //동전개수 TextView
     public TextView pE1, pE2, pE3, pE4 ,pE5, pE6, pE7, pE8, pE9, pE10, pE11, pE12, pE13, pE14, pE15;
-
     //설계문서와 변수 선언 다름
     int[] E = new int[15];  //동전개수, SP에서 가져다 쓸 것임, for문을 돌리기 위해 변경
     int[] E2 = {1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,20000,50000};   //해당 동전 액수
     int[] rE = new int[15]; //추천동전개수
 
-    public void Update_CoinCount(){    //설계문서와 인수 설정이 다를 듯 함
+    public void Update_CoinCount(int e1,int e2,int e3,int e4,int e5,int e6,int e7,int e8,int e9,int e10,int e11,int e12,int e13,int e14,int e15){
         //SP의 값 갱신
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = shared.edit();
-        edit.putInt("cent1",E[0]-rE[0]);
-        edit.putInt("cent2",E[1]-rE[1]);
-        edit.putInt("cent5",E[2]-rE[2]);
-        edit.putInt("cent10",E[3]-rE[3]);
-        edit.putInt("cent20",E[4]-rE[4]);
-        edit.putInt("cent50",E[5]-rE[5]);
-        edit.putInt("cent100",E[6]-rE[6]);
-        edit.putInt("cent200",E[7]-rE[7]);
-        edit.putInt("cent500",E[8]-rE[8]);
-        edit.putInt("cent1000",E[9]-rE[9]);
-        edit.putInt("cent2000",E[10]-rE[10]);
-        edit.putInt("cent5000",E[11]-rE[11]);
-        edit.putInt("cent10000",E[12]-rE[12]);
-        edit.putInt("cent20000",E[13]-rE[13]);
-        edit.putInt("cent50000",E[14]-rE[14]);
+        edit.putInt("cent1",e1);
+        edit.putInt("cent2",e2);
+        edit.putInt("cent5",e3);
+        edit.putInt("cent10",e4);
+        edit.putInt("cent20",e5);
+        edit.putInt("cent50",e6);
+        edit.putInt("cent100",e7);
+        edit.putInt("cent200",e8);
+        edit.putInt("cent500",e9);
+        edit.putInt("cent1000",e10);
+        edit.putInt("cent2000",e11);
+        edit.putInt("cent5000",e12);
+        edit.putInt("cent10000",e13);
+        edit.putInt("cent20000",e14);
+        edit.putInt("cent50000",e15);
         edit.apply();
     }
 
@@ -67,6 +65,24 @@ public class Recommend_Euro extends AppCompatActivity {
                 rE[i] = 0;
             }
         }
+        //계산 결과가 바르지 못함
+//        for(int i=0; i<15; i++){
+//            //howmuch -= E[i]*E2[i]; //동전 개수 * 동전 액수
+//            if (howmuch - E[i]*E2[i]>0){ //양의 값
+//                howmuch -= E[i]*E2[i];
+//                rE[i] = E[i];
+//            }else if(howmuch == E[i]*E2[i]){ //잔액이 0이 될 떄
+//                howmuch -= E[i]*E2[i];
+//                rE[i] = E[i];
+//                break;
+//            }else{
+//                for(int j=0;j<E[i];j++){
+//                    howmuch-=E2[i];
+//                    if(howmuch<0)
+//                        rE[i]=j;
+//                }
+//            }
+//        }
     }
 
 
@@ -76,6 +92,13 @@ public class Recommend_Euro extends AppCompatActivity {
         setContentView(R.layout.activity_recommend__euro);
 
         reBtn = (Button) findViewById(R.id.reBtn);  //버튼 객체를 레이아웃과 연결
+        intent = getIntent();
+        int eIN = intent.getIntExtra("eIN",0); //Pay화면에서 키값 'eIN'로 값 전달 받기
+        int eDE = intent.getIntExtra("eDE",0); //Pay화면에서 키값 'eDE'로 값 전달 받기
+        payEuro = (TextView) findViewById(R.id.payEuro);    //총액 표시 텍스트 뷰 연결
+        String eIN2 = Integer.toString(eIN);    //넘어온 값이 integer값이라 string형으로 변환
+        //String eDE2 = Integer.toString(eDE);  //테스트를 해보니 6센트를 지불하기 위해 06을 입력하거나 6을 입력하면 0.6으로 값이 표시되는 오류 발생
+        String eDE2;
 
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         E[0] = shared.getInt("cent1", -1);  //값 받음
@@ -93,13 +116,6 @@ public class Recommend_Euro extends AppCompatActivity {
         E[12] = shared.getInt("cent10000", -1);
         E[13] = shared.getInt("cent20000", -1);
         E[14] = shared.getInt("cent50000", -1);
-
-        intent = getIntent();
-
-        int eIN = intent.getIntExtra("eIN",0); //Pay화면에서 키값 'eIN'로 값 전달 받기
-        int eDE = intent.getIntExtra("eDE",0); //Pay화면에서 키값 'eDE'로 값 전달 받기
-
-        payEuro = (TextView) findViewById(R.id.payEuro);    //총액 표시 텍스트 뷰 연결
         //동전 텍스트 뷰랑 연결시키기
         pE1 = (TextView) findViewById(R.id.Rcoin1);
         pE2 = (TextView) findViewById(R.id.Rcoin2);
@@ -117,8 +133,10 @@ public class Recommend_Euro extends AppCompatActivity {
         pE14 = (TextView) findViewById(R.id.Rcoin14);
         pE15 = (TextView) findViewById(R.id.Rcoin15);
 
-        String eIN2 = Integer.toString(eIN);    //넘어온 값이 integer값이라 string형으로 변환
-        String eDE2 = Integer.toString(eDE);
+        if(eDE<10)
+            eDE2 = "0"+Integer.toString(eDE);
+        else
+            eDE2 = Integer.toString(eDE);
 
         payEuro.setText(eIN2+"."+eDE2); //총액표시
 
@@ -146,9 +164,8 @@ public class Recommend_Euro extends AppCompatActivity {
         reBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 //계산된 각 화폐 개수들 넘겨주기
-                Update_CoinCount();
+                Update_CoinCount(E[0]-rE[0],E[1]-rE[1],E[2]-rE[2],E[3]-rE[3],E[4]-rE[4],E[5]-rE[5],E[6]-rE[6],E[7]-rE[7],E[8]-rE[8],E[9]-rE[9],E[10]-rE[10],E[11]-rE[11],E[12]-rE[12],E[13]-rE[13],E[14]-rE[14]);
 
                 startActivity(intent);
             }

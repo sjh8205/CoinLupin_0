@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:background="@color/BgColor_Euro">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -35,7 +34,6 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp">
 
-
             <TextView
                 android:id="@+id/payYen"
                 android:background="@color/ActionBar"
@@ -44,6 +42,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="얼마얼마"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -62,7 +61,8 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen1"/>
+
                 <TextView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
@@ -73,7 +73,8 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen5"/>
+
                 <TextView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
@@ -84,14 +85,14 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen10"/>
+
                 <TextView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/RYcoin3"/>
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -103,7 +104,8 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                   />
+                    android:src="@drawable/yen50"/>
+
                 <TextView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
@@ -114,7 +116,7 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen100"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -126,7 +128,7 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen500"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -145,7 +147,7 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen1000"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -157,7 +159,7 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen2000"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -169,7 +171,7 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen5000"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -188,7 +190,7 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/yen10000"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -199,16 +201,16 @@
 
         </LinearLayout>
 
-    <Button
-        android:id="@+id/ryBtn"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@color/ActionBar"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        android:onClick="onClick"
-        android:text="OK"/>
+        <Button
+            android:id="@+id/ryBtn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@color/ActionBar"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:onClick="onClick"
+            android:text="OK"/>
 
+    </LinearLayout>
 
-</LinearLayout>
 </ScrollView>

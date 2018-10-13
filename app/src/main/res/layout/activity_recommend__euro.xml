@@ -5,47 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/BgColor_Euro">
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/ActionBar"
-        android:layout_marginBottom="10dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/BgColor_Euro">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="추천 방식"
-            android:textSize="25sp"
-            android:textAlignment="center"
-            android:gravity="center"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp">
-
-
-        <TextView
-            android:id="@+id/payEuro"
+            android:layout_height="70dp"
             android:background="@color/ActionBar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="얼마얼마"/>
+            android:layout_marginBottom="10dp">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="추천 방식"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/payEuro"
+                android:background="@color/ActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="얼마얼마"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -63,7 +61,8 @@
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
                     android:baselineAlignBottom="true"
-                    />
+                    android:src="@drawable/cent1"/>
+
                 <TextView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
@@ -73,7 +72,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/cent2"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -84,7 +84,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/cent5"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -102,7 +103,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/cent10"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -113,7 +115,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/cent20"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -124,7 +127,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/cent50"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -142,7 +146,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro1"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -153,7 +158,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro2"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -164,7 +170,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro5"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -182,7 +189,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro10"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -193,7 +201,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro20"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -204,7 +213,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro50"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -222,7 +232,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro100"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -233,7 +244,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro200"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -244,7 +256,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:adjustViewBounds="true"
-                    android:baselineAlignBottom="true"/>
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/euro500"/>
 
                 <TextView
                     android:layout_width="30dp"
@@ -255,18 +268,16 @@
 
         </LinearLayout>
 
-    <Button
-        android:id="@+id/reBtn"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@color/ActionBar"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        android:onClick="onClick"
-        android:text="OK"
-        />
+        <Button
+            android:id="@+id/reBtn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@color/ActionBar"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:onClick="onClick"
+            android:text="OK"/>
 
+    </LinearLayout>
 
-
-</LinearLayout>
 </ScrollView>

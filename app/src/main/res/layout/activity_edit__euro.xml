@@ -69,7 +69,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cent1"/>
 
                 <Button
                     android:id="@+id/pBtn1"
@@ -111,7 +112,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cent2"/>
 
                 <Button
                     android:id="@+id/pBtn2"
@@ -153,7 +155,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cent5"/>
 
                 <Button
                     android:id="@+id/pBtn3"
@@ -195,7 +198,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cent10"/>
 
                 <Button
                     android:id="@+id/pBtn4"
@@ -236,7 +240,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cent20"/>
 
                 <Button
                     android:id="@+id/pBtn5"
@@ -278,7 +283,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cent50"/>
 
                 <Button
                     android:id="@+id/pBtn6"
@@ -320,7 +326,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro1"/>
 
                 <Button
                     android:id="@+id/pBtn7"
@@ -362,7 +369,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro2"/>
 
                 <Button
                     android:id="@+id/pBtn8"
@@ -404,7 +412,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro5"/>
 
                 <Button
                     android:id="@+id/pBtn9"
@@ -446,7 +455,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro10"/>
 
                 <Button
                     android:id="@+id/pBtn10"
@@ -488,7 +498,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro20"/>
 
                 <Button
                     android:id="@+id/pBtn11"
@@ -530,7 +541,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro50"/>
 
                 <Button
                     android:id="@+id/pBtn12"
@@ -572,7 +584,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro100"/>
 
                 <Button
                     android:id="@+id/pBtn13"
@@ -614,7 +627,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro200"/>
 
                 <Button
                     android:id="@+id/pBtn14"
@@ -656,7 +670,8 @@
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/euro500"/>
 
                 <Button
                     android:id="@+id/pBtn15"

@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class MoneySet_Yen extends AppCompatActivity {
-
     private static String TAG = "NumberPicker";
 
     //ArrayList<Storage> data;
@@ -42,7 +41,6 @@ public class MoneySet_Yen extends AppCompatActivity {
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = shared.edit();
         //SharedPreference를 사용하기 위해 선언
-
         editor.putInt("yen1", Y1);
         editor.putInt("yen5", Y5);
         editor.putInt("yen10", Y10);
@@ -59,13 +57,11 @@ public class MoneySet_Yen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_set_yen);
 
         Button submit = (Button)findViewById(R.id.SubmitBudget_yen);
         //"SubmitBudget_yen"라는 id를 가진 button을 찾아와 submit으로 선언
-
         NumberPicker y1 = findViewById(R.id.yen_1);
         NumberPicker y5 = findViewById(R.id.yen_5);
         NumberPicker y10 = findViewById(R.id.yen_10);

@@ -18,11 +18,9 @@ public class Home_ChooseCountry extends AppCompatActivity {
         Button gotoEurope = (Button)findViewById(R.id.Home_euro);
         Button gotoJapan = (Button)findViewById(R.id.Home_yen);
         //id를 이용하여 불러와서 gotoEurope, gotoJapan으로 선언
-
         SharedPreferences check = getSharedPreferences("login", Context.MODE_PRIVATE);
         SharedPreferences.Editor move = check.edit();
         //화면 전환 SharedPreferences 사용을 위해 선언
-
         move.putInt("FirstorNot",0);
         move.commit();
         //화면 값 초기화
@@ -30,9 +28,6 @@ public class Home_ChooseCountry extends AppCompatActivity {
         gotoEurope.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Home_ChooseCountry.this, MoneySet_Euro.class);
-                startActivity(intent);
-
                 SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
                 //동전 개수 SharedPreferences 사용을 위해 선언
@@ -59,15 +54,15 @@ public class Home_ChooseCountry extends AppCompatActivity {
                 editor.putFloat("Total_money",0);
                 editor.apply();
                 //SharedPreference 값 초기화
+
+                Intent intent = new Intent(Home_ChooseCountry.this, MoneySet_Euro.class);
+                startActivity(intent);
             }
         });
 
         gotoJapan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Home_ChooseCountry.this, MoneySet_Yen.class);
-                startActivity(intent);
-
                 SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
                 //동전 개수 SharedPreferences 사용을 위해 선언
@@ -89,6 +84,9 @@ public class Home_ChooseCountry extends AppCompatActivity {
                 editor.putFloat("Total_money",0);
                 editor.apply();
                 //SharedPreference 값 초기화
+
+                Intent intent = new Intent(Home_ChooseCountry.this, MoneySet_Yen.class);
+                startActivity(intent);
             }
         });
     }

@@ -40,7 +40,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen1"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_1"
@@ -67,7 +68,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen5"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_5"
@@ -101,7 +103,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen10"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_10"
@@ -128,7 +131,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen50"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_50"
@@ -162,7 +166,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen100"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_100"
@@ -189,7 +194,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen500"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_500"
@@ -223,7 +229,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp" />
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen1000"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_1000"
@@ -250,7 +257,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen2000"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_2000"
@@ -284,7 +292,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen5000"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_5000"
@@ -311,7 +320,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/yen10000"/>
 
             <com.shawnlin.numberpicker.NumberPicker
                 android:id="@+id/yen_10000"

@@ -32,7 +32,6 @@ public class ShowMeTheMoney_Euro extends AppCompatActivity {
         editor.putInt("cent50000",0);
         editor.putFloat("total_money",0);
         editor.apply();
-
     }
 
 
@@ -41,10 +40,10 @@ public class ShowMeTheMoney_Euro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_me_the_money__euro);
 
-
         TextView Total_Money;    // 총 보유 금액 보여주는 textview 변수 Total_Money 선언
-        TextView ECoin1,ECoin2,ECoin3,ECoin4,ECoin5,ECoin6,ECoin7,ECoin8,ECoin9,ECoin10,ECoin11,ECoin12,ECoin13,ECoin14,ECoin15;  // 각 동전 개수 보여주는 texetview 변수 선언
-
+        TextView ECoin1,ECoin2,ECoin3,ECoin4,ECoin5,
+                ECoin6,ECoin7,ECoin8,ECoin9,ECoin10,
+                ECoin11,ECoin12,ECoin13,ECoin14,ECoin15;  // 각 동전 개수 보여주는 texetview 변수 선언
         Button gotoReset = (Button) findViewById(R.id.resetB);   // reset 버튼 변수 gotoReset 선언
         Button gotoPay = (Button) findViewById(R.id.payB);       // pay 버튼 변수 gotoPay 선언
         Button gotoEdit = (Button) findViewById(R.id.editB);     // edit 버튼 변수 gotoEdit 선언

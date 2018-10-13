@@ -68,7 +68,6 @@
                 android:gravity="center"
                 android:text="MONEY" />  <!-- 총 보유 금액 보여주는 textview -->
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,7 +84,9 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin1"/>
+                        android:id="@+id/coin1"
+                        android:src="@drawable/yen1"/>
+
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
@@ -96,18 +97,23 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin2"/>
+                        android:id="@+id/coin2"
+                        android:src="@drawable/yen5"/>
+
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/HMcoin2"/>
+
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin3"/>
+                        android:id="@+id/coin3"
+                        android:src="@drawable/yen10"/>
+
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
@@ -126,7 +132,9 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin4"/>
+                        android:id="@+id/coin4"
+                        android:src="@drawable/yen50"/>
+
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
@@ -137,7 +145,8 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin5" />
+                        android:id="@+id/coin5"
+                        android:src="@drawable/yen100"/>
 
                     <TextView
                         android:layout_width="30dp"
@@ -149,7 +158,8 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin6" />
+                        android:id="@+id/coin6"
+                        android:src="@drawable/yen500"/>
 
                     <TextView
                         android:layout_width="30dp"
@@ -168,7 +178,8 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin7" />
+                        android:id="@+id/coin7"
+                        android:src="@drawable/yen1000"/>
 
                     <TextView
                         android:layout_width="30dp"
@@ -180,7 +191,8 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin8" />
+                        android:id="@+id/coin8"
+                        android:src="@drawable/yen2000"/>
 
                     <TextView
                         android:layout_width="30dp"
@@ -192,7 +204,8 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin9" />
+                        android:id="@+id/coin9"
+                        android:src="@drawable/yen5000"/>
 
                     <TextView
                         android:layout_width="30dp"
@@ -211,7 +224,8 @@
                         android:layout_height="80dp"
                         android:adjustViewBounds="true"
                         android:baselineAlignBottom="true"
-                        android:id="@+id/coin10" />
+                        android:id="@+id/coin10"
+                        android:src="@drawable/yen10000"/>
 
                     <TextView
                         android:layout_width="30dp"
@@ -220,9 +234,7 @@
 
                 </LinearLayout>
 
-
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -242,4 +254,5 @@
         </RelativeLayout>
 
     </LinearLayout>
+
 </ScrollView>

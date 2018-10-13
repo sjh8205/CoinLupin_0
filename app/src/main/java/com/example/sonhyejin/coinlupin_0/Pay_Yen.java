@@ -15,9 +15,7 @@ public class Pay_Yen extends AppCompatActivity {
 
     public TextView yen;    //지불금액
     public Button yBtn; //ok버튼
-
     int y=0;
-
     Intent intent;
 
     @Override
@@ -27,9 +25,7 @@ public class Pay_Yen extends AppCompatActivity {
 
         yen = (TextView) findViewById(R.id.yen);
         yBtn = (Button) findViewById(R.id.yBtn);    //이 버튼 눌렀을 때 다음 페이지로 값(yen)넘어감
-
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
-
         intent = new Intent(Pay_Yen.this, Recommend_Yen.class);
 
         yBtn.setOnClickListener(new View.OnClickListener() {

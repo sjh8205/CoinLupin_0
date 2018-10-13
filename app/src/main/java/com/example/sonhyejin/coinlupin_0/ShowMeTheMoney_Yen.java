@@ -27,7 +27,6 @@ public class ShowMeTheMoney_Yen extends AppCompatActivity {
         editor.putInt("yen10000", 0);
         editor.putFloat("total_money",0);
         editor.apply();
-
     }
 
     @Override
@@ -36,7 +35,8 @@ public class ShowMeTheMoney_Yen extends AppCompatActivity {
         setContentView(R.layout.activity_show_me_the_money_yen);
 
         TextView Total_Money;    // 총 보유 금액 보여주는 textview 변수 Total_Money 선언
-        TextView YCoin1,YCoin2,YCoin3, YCoin4,YCoin5,YCoin6,YCoin7,YCoin8,YCoin9,YCoin10;    // 각 동전 개수 보여주는 texetview 변수 선언
+        TextView YCoin1,YCoin2,YCoin3, YCoin4,YCoin5,
+                YCoin6,YCoin7,YCoin8,YCoin9,YCoin10;    // 각 동전 개수 보여주는 texetview 변수 선언
 
         Button gotoReset = (Button) findViewById(R.id.resetB);     // reset 버튼 변수 gotoReset 선언
         Button gotoPay = (Button) findViewById(R.id.payB);         // pay 버튼 변수 gotoPay 선언
