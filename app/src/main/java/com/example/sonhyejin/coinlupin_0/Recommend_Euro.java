@@ -44,6 +44,7 @@ public class Recommend_Euro extends AppCompatActivity {
     }
 
     public void CalculateCoin(int howmuch){ //추천 동전계산 함수
+        int original = howmuch; //밑에서 값을 다시 사용하기 위해 저장
         for(int i=0; i<15; i++){
             if(E[i] == 0){  //동전 없음
                 rE[i] = E[i];
@@ -65,6 +66,32 @@ public class Recommend_Euro extends AppCompatActivity {
                 rE[i] = 0;
             }
         }
+
+        int recommand=0;    //추천 동전 총액 계산
+        for(int i=0; i<15; i++){    //추천 지불 금액의 총액 계산
+            recommand += rE[i]*E2[i];
+        }
+        if(recommand>original){
+            int gap = recommand - original;
+            for(int i=0; i<15; i++){
+                if(rE[14-i] !=0 && gap >= E2[14-i]) {    //해당 화폐가 추천 되었고, gap이 해당 화폐값보다 큰 화폐의 경우에만 고려
+                    if(gap >= rE[14-i]*E2[14-i]){  //해당 동전을 전부 사용 가능하면
+                        rE[14-i] =0;
+                        gap -= rE[14-i]*E2[14-i];
+                    }else{  //해당 동전 일부만 내야 하면
+                        for(int j=0; j<rE[14-i]; j++){
+                            gap -= E2[14-i];
+                            if(gap<= 0){
+                                rE[14-i] -= j+1;
+                                //j=E[i];
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
         //계산 결과가 바르지 못함
 //        for(int i=0; i<15; i++){
 //            //howmuch -= E[i]*E2[i]; //동전 개수 * 동전 액수
@@ -83,7 +110,6 @@ public class Recommend_Euro extends AppCompatActivity {
 //                }
 //            }
 //        }
-    }
 
 
     @Override

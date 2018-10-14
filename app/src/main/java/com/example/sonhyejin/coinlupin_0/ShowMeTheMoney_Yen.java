@@ -108,7 +108,7 @@ public class ShowMeTheMoney_Yen extends AppCompatActivity {
         gotoEdit.setOnClickListener(new View.OnClickListener() {       //edit 버튼 눌렀을 때
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Edit_Euro.class);     //intent() 함수 이용해서 화면 전환
+                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Edit_Yen.class);     //intent() 함수 이용해서 화면 전환
                 startActivity(intent);
             }
         });
@@ -116,7 +116,7 @@ public class ShowMeTheMoney_Yen extends AppCompatActivity {
         gotoPay.setOnClickListener(new View.OnClickListener() {      //pay 버튼 눌렀을 때
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Pay_Euro.class);     //intent() 함수 이용해서 화면 전환
+                Intent intent = new Intent(ShowMeTheMoney_Yen.this, Pay_Yen.class);     //intent() 함수 이용해서 화면 전환
                 startActivity(intent);
             }
         });
