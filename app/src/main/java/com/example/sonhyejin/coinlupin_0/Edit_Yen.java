@@ -28,7 +28,7 @@ public class Edit_Yen extends AppCompatActivity {
     TextView Edit1, Edit2, Edit3, Edit4, Edit5, Edit6, Edit7,
             Edit8, Edit9, Edit10;//edit 된 동전개수
 
-    int OwnMoney;
+    float OwnMoney;
 
 
 
@@ -37,11 +37,11 @@ public class Edit_Yen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_yen);
 
-        SharedPreferences shared = getSharedPreferences("shared", MODE_PRIVATE);
+        SharedPreferences shared = getSharedPreferences("name", MODE_PRIVATE);
 
-        OwnMoney = shared.getInt("total_money", 0);
+        OwnMoney = shared.getFloat("total_money", 0);
         Total_Money = (TextView)findViewById(R.id.Total_Money);
-        Total_Money.setText(Integer.toString(OwnMoney));
+        Total_Money.setText(Float.toString(OwnMoney));
 
 
         //sp 에서 동전 개수(YEcoin) 불러오기
@@ -68,7 +68,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin1 -= 1;
                 Edit1.setText(Integer.toString(YEcoin1));//String값으로 바꿔서 Edit에 대입
                 OwnMoney -= 1;//동전개수에서 동전 가격으로 바꿔서 총 금액에 합산해줌
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin1 < 0) {//입력범위 초과시 오류메세지 띄움
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -83,7 +83,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin1 += 1;
                 Edit1.setText(Integer.toString(YEcoin1));
                 OwnMoney += 1;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin1 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -98,7 +98,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin2 -= 1;
                 Edit2.setText(Integer.toString(YEcoin2));
                 OwnMoney -= 5;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin2 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -113,7 +113,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin2 += 1;
                 Edit2.setText(Integer.toString(YEcoin2));
                 OwnMoney += 5;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin2 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -128,7 +128,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin3 -= 1;
                 Edit3.setText(Integer.toString(YEcoin3));
                 OwnMoney -= 10;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin3 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -143,7 +143,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin3 += 1;
                 Edit3.setText(Integer.toString(YEcoin3));
                 OwnMoney += 10;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin3 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -158,7 +158,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin4 -= 1;
                 Edit4.setText(Integer.toString(YEcoin4));
                 OwnMoney -= 50;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin4 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -173,7 +173,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin4 += 1;
                 Edit4.setText(Integer.toString(YEcoin4));
                 OwnMoney += 50;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin4 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -188,7 +188,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin5 -= 1;
                 Edit5.setText(Integer.toString(YEcoin5));
                 OwnMoney -= 100;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin5 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -203,7 +203,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin5 += 1;
                 Edit5.setText(Integer.toString(YEcoin5));
                 OwnMoney += 100;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin5 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -218,7 +218,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin6 -= 1;
                 Edit6.setText(Integer.toString(YEcoin6));
                 OwnMoney -= 500;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin6 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -233,7 +233,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin6 += 1;
                 Edit6.setText(Integer.toString(YEcoin6));
                 OwnMoney += 500;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin6 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -248,7 +248,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin7 -= 1;
                 Edit7.setText(Integer.toString(YEcoin7));
                 OwnMoney -= 1000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin7 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -263,7 +263,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin7 += 1;
                 Edit7.setText(Integer.toString(YEcoin7));
                 OwnMoney += 1000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin7 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -278,7 +278,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin8 -= 1;
                 Edit8.setText(Integer.toString(YEcoin8));
                 OwnMoney -= 2000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin8 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -293,7 +293,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin8 += 1;
                 Edit8.setText(Integer.toString(YEcoin8));
                 OwnMoney += 2000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin8 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -308,7 +308,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin9 -= 1;
                 Edit9.setText(Integer.toString(YEcoin9));
                 OwnMoney -= 5000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin9 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -323,7 +323,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin9 += 1;
                 Edit9.setText(Integer.toString(YEcoin9));
                 OwnMoney += 5000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin9 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -338,7 +338,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin10 -= 1;
                 Edit10.setText(Integer.toString(YEcoin10));
                 OwnMoney -= 10000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin10 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -353,7 +353,7 @@ public class Edit_Yen extends AppCompatActivity {
                 YEcoin10 += 1;
                 Edit10.setText(Integer.toString(YEcoin10));
                 OwnMoney += 10000;
-                Total_Money.setText(Integer.toString(OwnMoney));
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin10 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -362,7 +362,7 @@ public class Edit_Yen extends AppCompatActivity {
 
 
 
-        Total_Money.setText(Integer.toString(OwnMoney));
+        Total_Money.setText(Float.toString(OwnMoney));
 
         ok = findViewById(R.id.btn_next);
 
@@ -384,7 +384,7 @@ public class Edit_Yen extends AppCompatActivity {
                 editor.putInt("yen5000", YEcoin9);
                 editor.putInt("yen10000", YEcoin10);
 
-                editor.putInt("Total_Money", OwnMoney);
+                editor.putFloat("Total_Money", OwnMoney);
 
                 editor.apply();
 
