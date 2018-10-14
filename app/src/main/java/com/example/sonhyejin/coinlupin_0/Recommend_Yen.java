@@ -114,6 +114,7 @@ public class Recommend_Yen extends AppCompatActivity {
         int y = intent.getIntExtra("y", 0); //Pay화면에서 키값 'y'로 값 전달 받기
 
         payYen = (TextView) findViewById(R.id.payYen);    //총액 표시 텍스트 뷰 연결
+        
         //동전 텍스트 뷰랑 연결시키기
         pY1 = (TextView) findViewById(R.id.RYcoin1);
         pY2 = (TextView) findViewById(R.id.RYcoin2);
