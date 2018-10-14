@@ -8,14 +8,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Recommend_Euro extends AppCompatActivity {
 
     public Button reBtn;
     public TextView payEuro;
     Intent intent;
+
     //동전개수 TextView
     public TextView pE1, pE2, pE3, pE4 ,pE5, pE6, pE7, pE8, pE9, pE10, pE11, pE12, pE13, pE14, pE15;
+
     //설계문서와 변수 선언 다름
     int[] E = new int[15];  //동전개수, SP에서 가져다 쓸 것임, for문을 돌리기 위해 변경
     int[] E2 = {1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,20000,50000};   //해당 동전 액수
@@ -71,7 +74,7 @@ public class Recommend_Euro extends AppCompatActivity {
         for(int i=0; i<15; i++){    //추천 지불 금액의 총액 계산
             recommand += rE[i]*E2[i];
         }
-        if(recommand>original){
+        if(recommand>original){ //지불 금액의 총액을 넘을 경우
             int gap = recommand - original;
             for(int i=0; i<15; i++){
                 if(rE[14-i] !=0 && gap >= E2[14-i]) {    //해당 화폐가 추천 되었고, gap이 해당 화폐값보다 큰 화폐의 경우에만 고려
@@ -91,25 +94,97 @@ public class Recommend_Euro extends AppCompatActivity {
                 }
             }
         }
-    }
-        //계산 결과가 바르지 못함
-//        for(int i=0; i<15; i++){
-//            //howmuch -= E[i]*E2[i]; //동전 개수 * 동전 액수
-//            if (howmuch - E[i]*E2[i]>0){ //양의 값
-//                howmuch -= E[i]*E2[i];
-//                rE[i] = E[i];
-//            }else if(howmuch == E[i]*E2[i]){ //잔액이 0이 될 떄
-//                howmuch -= E[i]*E2[i];
-//                rE[i] = E[i];
-//                break;
-//            }else{
-//                for(int j=0;j<E[i];j++){
-//                    howmuch-=E2[i];
-//                    if(howmuch<0)
-//                        rE[i]=j;
+
+//        //howmuch 값이 위에서 바꼈는데...제대로...나올리가....밑에 알고리즘이 그래서...다.....값이 잘못나온 근본적인..이유....
+//        //계산 결과가 바르지 못함
+////        for(int i=0; i<15; i++){
+////            //howmuch -= E[i]*E2[i]; //동전 개수 * 동전 액수
+////            if (howmuch - E[i]*E2[i]>0){ //양의 값
+////                howmuch -= E[i]*E2[i];
+////                rE[i] = E[i];
+////            }else if(howmuch == E[i]*E2[i]){ //잔액이 0이 될 떄
+////                howmuch -= E[i]*E2[i];
+////                rE[i] = E[i];
+////                break;
+////            }else{
+////                for(int j=0;j<E[i];j++){
+////                    howmuch-=E2[i];
+////                    if(howmuch<0)
+////                        rE[i]=j;
+////                }
+////            }
+////        }
+//        int recommand = 0;
+//        for(int i=0; i<15; i++){    //추천 지불 금액의 총액 계산
+//            recommand += rE[i]*E2[i];
+//        }
+//        if(recommand-howmuch>0){  //추천 금액이 지불 금액보다 클 때
+//            int gap=recommand-howmuch;  //여기까지는 어플중단되지 않고 실행
+////            for(int i=0; i<15; i++){    //gap값이 잘 나오는지 확인
+////                rE[i] = gap
+////            }
+//
+//            for(int i=0; i<15; i++){
+//                if(rE[14-i] !=0 && gap >= E2[14-i]) {    //해당 화폐가 추천 되었고, gap이 해당 화폐값보다 큰 화폐의 경우에만 고려
+//                    rE[14-i]=gap;
 //                }
 //            }
+//
+//            //for(int i=0; i<15; i++){    //가장 큰 단위 화폐부터 확인
+//                //다른 값도 불필요하게 차감됨
+////                if(rE[14-i] == 0 && E2[14-1] <= gap) {  //동전 없음, 차이가 해당 화폐보다 작은 경우
+////                    rE[14 - i] = rE[14 - i];    //계산없이 그냥 그대로
+////                }else{
+////                    if(gap >= rE[14-i]*E2[14-i]){  //해당 동전을 전부 사용 가능하면  //해당 알고리즘을 최종적으로 사용하였습니다!!!!!
+////                        rE[14-i] =0;
+////                        gap -= rE[14-i]*E2[14-i];
+////                    }else{  //해당 동전 일부만 내야 하면
+////                        for(int j=0; j<rE[14-i]; j++){
+////                            gap -= E2[14-i];
+////                            if(gap<= 0){
+////                                rE[14-i] -= j+1;
+////                                //j=E[i];
+////                                break;
+////                            }
+////                        }
+////                    }
+////                }
+//                //값이 전부 0이 나와버림
+////                if(rE[14-i] == 0 || E2[14-1] <= gap){  //동전 없거나 차이가 해당 화폐보다 작은 경우
+////                    rE[14-i] = rE[14-i];    //계산없이 그냥 그대로
+////                }else if(gap > 0){  //동전 있고, 차이 남음
+////                    if(gap >= rE[14-i]*E2[14-i]){  //해당 동전을 전부 사용 가능하면
+////                        rE[14-i] =0;
+////                        gap -= rE[14-i]*E2[14-i];
+////                    }else{  //해당 동전 일부만 내야 하면
+////                        for(int j=0; j<rE[14-i]; j++){
+////                            gap -= E2[14-i];
+////                            if(gap<= 0){
+////                                rE[14-i] -= j+1;
+////                                //j=E[i];
+////                                break;
+////                            }
+////                        }
+////                    }
+////                }else{  //지불 금액 안 남음
+////                    rE[14-i] = rE[14-i];
+////                }
+////                for(int j=0; j<rE[14-i];j++){   //가장 큰 금액부터 확인해 나간다.
+////                    if(gap-E2[14-i]>=0){
+////                        gap -= E2[14-i];
+////                        rE[14-i] -= 1;
+////                    }else
+////                        break;
+//////                    gap -= E2[14-i];  //캡쳐
+//////                    //if(gap>= 0)
+//////                    if(gap>= E2[14-i])
+//////                        rE[14-i]--;
+//////                    else
+//////                        break;
+////                }
+//           // }
 //        }
+    }
 
 
     @Override
@@ -118,13 +193,6 @@ public class Recommend_Euro extends AppCompatActivity {
         setContentView(R.layout.activity_recommend__euro);
 
         reBtn = (Button) findViewById(R.id.reBtn);  //버튼 객체를 레이아웃과 연결
-        intent = getIntent();
-        int eIN = intent.getIntExtra("eIN",0); //Pay화면에서 키값 'eIN'로 값 전달 받기
-        int eDE = intent.getIntExtra("eDE",0); //Pay화면에서 키값 'eDE'로 값 전달 받기
-        payEuro = (TextView) findViewById(R.id.payEuro);    //총액 표시 텍스트 뷰 연결
-        String eIN2 = Integer.toString(eIN);    //넘어온 값이 integer값이라 string형으로 변환
-        //String eDE2 = Integer.toString(eDE);  //테스트를 해보니 6센트를 지불하기 위해 06을 입력하거나 6을 입력하면 0.6으로 값이 표시되는 오류 발생
-        String eDE2;
 
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         E[0] = shared.getInt("cent1", -1);  //값 받음
@@ -142,6 +210,13 @@ public class Recommend_Euro extends AppCompatActivity {
         E[12] = shared.getInt("cent10000", -1);
         E[13] = shared.getInt("cent20000", -1);
         E[14] = shared.getInt("cent50000", -1);
+
+        intent = getIntent();
+
+        int eIN = intent.getIntExtra("eIN",0); //Pay화면에서 키값 'eIN'로 값 전달 받기
+        int eDE = intent.getIntExtra("eDE",0); //Pay화면에서 키값 'eDE'로 값 전달 받기
+
+        payEuro = (TextView) findViewById(R.id.payEuro);    //총액 표시 텍스트 뷰 연결
         //동전 텍스트 뷰랑 연결시키기
         pE1 = (TextView) findViewById(R.id.Rcoin1);
         pE2 = (TextView) findViewById(R.id.Rcoin2);
@@ -159,6 +234,9 @@ public class Recommend_Euro extends AppCompatActivity {
         pE14 = (TextView) findViewById(R.id.Rcoin14);
         pE15 = (TextView) findViewById(R.id.Rcoin15);
 
+        String eIN2 = Integer.toString(eIN);    //넘어온 값이 integer값이라 string형으로 변환
+        //String eDE2 = Integer.toString(eDE);  //테스트를 해보니 6센트를 지불하기 위해 06을 입력하거나 6을 입력하면 0.6으로 값이 표시되는 오류 발생
+        String eDE2;
         if(eDE<10)
             eDE2 = "0"+Integer.toString(eDE);
         else
@@ -190,6 +268,7 @@ public class Recommend_Euro extends AppCompatActivity {
         reBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //계산된 각 화폐 개수들 넘겨주기
                 Update_CoinCount(E[0]-rE[0],E[1]-rE[1],E[2]-rE[2],E[3]-rE[3],E[4]-rE[4],E[5]-rE[5],E[6]-rE[6],E[7]-rE[7],E[8]-rE[8],E[9]-rE[9],E[10]-rE[10],E[11]-rE[11],E[12]-rE[12],E[13]-rE[13],E[14]-rE[14]);
 
