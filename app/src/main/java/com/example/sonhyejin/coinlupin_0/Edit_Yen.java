@@ -346,7 +346,7 @@ public class Edit_Yen extends AppCompatActivity {
 
         ok = findViewById(R.id.btn_next);
 
-        Intent NextPay = new Intent(this, ShowMeTheMoney_Euro.class);
+        Intent NextPay = new Intent(this, ShowMeTheMoney_Yen.class);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {//편집한 값 sp에 저장
