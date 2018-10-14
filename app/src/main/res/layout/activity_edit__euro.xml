@@ -44,7 +44,9 @@
                 android:layout_gravity="center"
                 android:background="@color/ActionBar"
                 android:gravity="center" />
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -90,7 +92,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +134,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -175,7 +175,6 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
-
 
             </LinearLayout>
 
@@ -261,7 +260,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -303,7 +301,6 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
-
 
             </LinearLayout>
 
@@ -347,7 +344,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -389,7 +385,6 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
-
 
             </LinearLayout>
 
@@ -433,7 +428,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -475,7 +469,6 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
-
 
             </LinearLayout>
 
@@ -519,7 +512,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -561,7 +553,6 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
-
 
             </LinearLayout>
 
@@ -605,7 +596,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -647,7 +637,6 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
-
 
             </LinearLayout>
 
@@ -691,7 +680,6 @@
                     android:layout_marginLeft="50dp"
                     android:background="@color/ActionBar" />
 
-
             </LinearLayout>
 
             <Button
@@ -705,5 +693,7 @@
                 android:text="@string/next" />
 
         </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>
