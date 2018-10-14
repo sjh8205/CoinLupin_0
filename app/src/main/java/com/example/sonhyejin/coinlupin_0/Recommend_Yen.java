@@ -134,16 +134,16 @@ public class Recommend_Yen extends AppCompatActivity {
         CalculateCoin(y); //추천 동전 개수 계산 함수 호출
 
         //동전개수 표시하기
-        pY1.setText(rY[0]);
-        pY2.setText(rY[1]);
-        pY3.setText(rY[2]);
-        pY4.setText(rY[3]);
-        pY5.setText(rY[4]);
-        pY6.setText(rY[5]);
-        pY7.setText(rY[6]);
-        pY8.setText(rY[7]);
-        pY9.setText(rY[8]);
-        pY10.setText(rY[9]);
+        pY1.setText(Integer.toString(rY[0]));
+        pY2.setText(Integer.toString(rY[1]));
+        pY3.setText(Integer.toString(rY[2]));
+        pY4.setText(Integer.toString(rY[3]));
+        pY5.setText(Integer.toString(rY[4]));
+        pY6.setText(Integer.toString(rY[5]));
+        pY7.setText(Integer.toString(rY[6]));
+        pY8.setText(Integer.toString(rY[7]));
+        pY9.setText(Integer.toString(rY[8]));
+        pY10.setText(Integer.toString(rY[9]));
 
         intent = new Intent(com.example.sonhyejin.coinlupin_0.Recommend_Yen.this, ShowMeTheMoney_Yen.class);
         ryBtn.setOnClickListener(new View.OnClickListener() {
