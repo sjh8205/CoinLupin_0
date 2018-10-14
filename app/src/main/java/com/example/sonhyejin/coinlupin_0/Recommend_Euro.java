@@ -76,20 +76,31 @@ public class Recommend_Euro extends AppCompatActivity {
         }
         if(recommand>original){ //지불 금액의 총액을 넘을 경우
             int gap = recommand - original;
+            //Toast.makeText(Recommend_Euro.this, Integer.toString(gap), Toast.LENGTH_LONG).show(); //gap값이 제대로 나오는지 확인하기 위한 코드
             for(int i=0; i<15; i++){
                 if(rE[14-i] !=0 && gap >= E2[14-i]) {    //해당 화폐가 추천 되었고, gap이 해당 화폐값보다 큰 화폐의 경우에만 고려
                     if(gap >= rE[14-i]*E2[14-i]){  //해당 동전을 전부 사용 가능하면
                         rE[14-i] =0;
                         gap -= rE[14-i]*E2[14-i];
+                        //Toast.makeText(Recommend_Euro.this, "a "+Integer.toString(gap), Toast.LENGTH_LONG).show(); //gap값이 제대로 나오는지 확인하기 위한 코드
                     }else{  //해당 동전 일부만 내야 하면
                         for(int j=0; j<rE[14-i]; j++){
-                            gap -= E2[14-i];
-                            if(gap<= 0){
-                                rE[14-i] -= j+1;
-                                //j=E[i];
+                            if(gap>=E2[14-i]){  //해당 동전값을 하나씩 빼가면서
+                                rE[14-i]--;
+                                gap -=E2[14-i];
+                            }else{
                                 break;
                             }
+//                            gap -= E2[14-i];
+//                            //Toast.makeText(Recommend_Euro.this, "b "+Integer.toString(gap), Toast.LENGTH_LONG).show(); //gap값이 제대로 나오는지 확인하기 위한 코드
+//                            if(gap<= 0){
+//                                rE[14-i] -= j;
+//                                //gap += E2[14-i];
+//                                //j=E[i];
+//                                break;
+//                            }
                         }
+                        //Toast.makeText(Recommend_Euro.this, "c "+Integer.toString(gap), Toast.LENGTH_LONG).show(); //gap값이 제대로 나오는지 확인하기 위한 코드
                     }
                 }
             }

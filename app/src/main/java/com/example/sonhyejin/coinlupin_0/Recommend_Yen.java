@@ -75,12 +75,13 @@ public class Recommend_Yen extends AppCompatActivity {
                     if(gap >= rY[9-i]*Y2[9-i]){  //해당 동전을 전부 사용 가능하면
                         rY[9-i] =0;
                         gap -= rY[9-i]*Y2[9-i];
+                        //Toast.makeText(Recommend_Euro.this, "a "+Integer.toString(gap), Toast.LENGTH_LONG).show(); //gap값이 제대로 나오는지 확인하기 위한 코드
                     }else{  //해당 동전 일부만 내야 하면
                         for(int j=0; j<rY[9-i]; j++){
-                            gap -= Y2[9-i];
-                            if(gap<= 0){
-                                rY[9-i] -= j+1;
-                                //j=E[i];
+                            if(gap>=Y2[9-i]){  //해당 동전값을 하나씩 빼가면서
+                                rY[9-i]--;
+                                gap -=Y2[9-i];
+                            }else{
                                 break;
                             }
                         }
