@@ -71,9 +71,11 @@ public class Recommend_Euro extends AppCompatActivity {
         }
 
         int recommand=0;    //추천 동전 총액 계산
+
         for(int i=0; i<15; i++){    //추천 지불 금액의 총액 계산
             recommand += rE[i]*E2[i];
         }
+
         if(recommand>original){ //지불 금액의 총액을 넘을 경우
             int gap = recommand - original;
             //Toast.makeText(Recommend_Euro.this, Integer.toString(gap), Toast.LENGTH_LONG).show(); //gap값이 제대로 나오는지 확인하기 위한 코드

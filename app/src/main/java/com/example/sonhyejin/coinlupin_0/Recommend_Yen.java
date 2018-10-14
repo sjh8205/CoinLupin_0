@@ -65,9 +65,11 @@ public class Recommend_Yen extends AppCompatActivity {
         }
 
         int recommand=0;    //추천 동전 총액 계산
+
         for(int i=0; i<10; i++){    //추천 지불 금액의 총액 계산
             recommand += rY[i]*Y2[i];
         }
+
         if(recommand>original){ //지불 금액의 총액을 넘을 경우
             int gap = recommand - original;
             for(int i=0; i<10; i++){
