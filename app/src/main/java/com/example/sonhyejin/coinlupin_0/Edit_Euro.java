@@ -26,7 +26,7 @@ public class Edit_Euro extends AppCompatActivity {
     int EEcoin1, EEcoin2, EEcoin3, EEcoin4, EEcoin5, EEcoin6, EEcoin7, EEcoin8,
             EEcoin9, EEcoin10, EEcoin11, EEcoin12, EEcoin13, EEcoin14, EEcoin15; //동전 개수 sp 에서 가져올거
 
-   // int e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15; //EEcoin 버튼누른거 받을변수
+    int e1; //EEcoin 버튼누른거 받을변수
 
     TextView Edit1, Edit2, Edit3, Edit4, Edit5, Edit6, Edit7,
             Edit8, Edit9, Edit10, Edit11, Edit12, Edit13, Edit14, Edit15; //edit 된 동전개수
@@ -543,6 +543,9 @@ public class Edit_Euro extends AppCompatActivity {
                 editor.putInt("cent20000", EEcoin14);
                 editor.putInt("cent50000", EEcoin15);
                 editor.putFloat("Total_Money", OwnMoney);
+
+                //Toast.makeText(Edit_Euro.this, "score:" + EEcoin1, Toast.LENGTH_LONG).show();
+                
 
                 editor.apply();
 
