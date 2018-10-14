@@ -26,10 +26,12 @@ public class Edit_Euro extends AppCompatActivity {
     int EEcoin1, EEcoin2, EEcoin3, EEcoin4, EEcoin5, EEcoin6, EEcoin7, EEcoin8,
             EEcoin9, EEcoin10, EEcoin11, EEcoin12, EEcoin13, EEcoin14, EEcoin15; //동전 개수 sp 에서 가져올거
 
+   // int e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15; //EEcoin 버튼누른거 받을변수
+
     TextView Edit1, Edit2, Edit3, Edit4, Edit5, Edit6, Edit7,
             Edit8, Edit9, Edit10, Edit11, Edit12, Edit13, Edit14, Edit15; //edit 된 동전개수
 
-    float OwnMoney;
+    float OwnMoney; // 총 보유금액 sp 에서 가져올거
 
 
     @Override
@@ -37,28 +39,29 @@ public class Edit_Euro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit__euro);
 
-        SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
+        SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
 
-        //OwnMoney = sp.getFloat("Total_money", 0);
+        OwnMoney = shared.getFloat("total_money", 0);
         Total_Money = (TextView) findViewById(R.id.Total_Money);
+        Total_Money.setText(Float.toString(OwnMoney));
 
 
         //sp 에서 동전 개수(Ecoin) 불러오기
         // Edit에 받아야되는데 int 라서 일단 EEcoin에 받음
-        EEcoin1 = sp.getInt("cent1", 0);
-        EEcoin2 = sp.getInt("cent2", 0);
-        EEcoin3 = sp.getInt("cent5", 0);
-        EEcoin4 = sp.getInt("cent10", 0);
-        EEcoin5 = sp.getInt("cent20", 0);
-        EEcoin6 = sp.getInt("cent50", 0);
-        EEcoin8 = sp.getInt("cent200", 0);
-        EEcoin9 = sp.getInt("cent500", 0);
-        EEcoin10 = sp.getInt("cent1000", 0);
-        EEcoin11 = sp.getInt("cent2000", 0);
-        EEcoin12 = sp.getInt("cent5000", 0);
-        EEcoin13 = sp.getInt("cent10000", 0);
-        EEcoin14 = sp.getInt("cent20000", 0);
-        EEcoin15 = sp.getInt("cent50000", 0);
+        EEcoin1 = shared.getInt("cent1", 0);
+        EEcoin2 = shared.getInt("cent2", 0);
+        EEcoin3 = shared.getInt("cent5", 0);
+        EEcoin4 = shared.getInt("cent10", 0);
+        EEcoin5 = shared.getInt("cent20", 0);
+        EEcoin6 = shared.getInt("cent50", 0);
+        EEcoin8 = shared.getInt("cent200", 0);
+        EEcoin9 = shared.getInt("cent500", 0);
+        EEcoin10 = shared.getInt("cent1000", 0);
+        EEcoin11 = shared.getInt("cent2000", 0);
+        EEcoin12 = shared.getInt("cent5000", 0);
+        EEcoin13 = shared.getInt("cent10000", 0);
+        EEcoin14 = shared.getInt("cent20000", 0);
+        EEcoin15 = shared.getInt("cent50000", 0);
 
 
 //-, +버튼 동작
@@ -69,7 +72,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin1 -= 1;
                 Edit1.setText(Integer.toString(EEcoin1));//String 값으로 바꿔서 Edit에 대입
-                OwnMoney += EEcoin1 * 0.01;//동전개수에서 동전 가격으로 바꿔서 총 금액에 합산해줌
+                OwnMoney -= 0.01;//동전개수에서 동전 가격으로 바꿔서 총 금액에 합산해줌
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin1 < 0) {//입력범위 초과한 경우 오류메세지 띄움
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -84,7 +88,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin1 += 1;
                 Edit1.setText(Integer.toString(EEcoin1));
-                OwnMoney += EEcoin1 * 0.01;
+                OwnMoney +=  0.01;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin1 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -98,7 +103,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin2 -= 1;
                 Edit2.setText(Integer.toString(EEcoin2));
-                OwnMoney += EEcoin2 * 0.02;
+                OwnMoney -=  0.02;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin2 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -112,7 +118,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin2 += 1;
                 Edit2.setText(Integer.toString(EEcoin2));
-                OwnMoney += EEcoin2 * 0.02;
+                OwnMoney +=  0.02;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin2 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -126,7 +133,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin3 -= 1;
                 Edit3.setText(Integer.toString(EEcoin3));
-                OwnMoney += EEcoin3 * 0.05;
+                OwnMoney -=  0.05;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin3 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -140,7 +148,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin3 += 1;
                 Edit3.setText(Integer.toString(EEcoin3));
-                OwnMoney += EEcoin3 * 0.05;
+                OwnMoney +=  0.05;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin3 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -154,7 +163,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin4 -= 1;
                 Edit4.setText(Integer.toString(EEcoin4));
-                OwnMoney += EEcoin4 * 0.1;
+                OwnMoney -=  0.1;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin4 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -168,7 +178,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin4 += 1;
                 Edit4.setText(Integer.toString(EEcoin4));
-                OwnMoney += EEcoin4 * 0.1;
+                OwnMoney +=  0.1;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin4 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -182,7 +193,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin5 -= 1;
                 Edit5.setText(Integer.toString(EEcoin5));
-                OwnMoney += EEcoin5 * 0.2;
+                OwnMoney -=  0.2;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin5 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -196,7 +208,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin5 += 1;
                 Edit5.setText(Integer.toString(EEcoin5));
-                OwnMoney += EEcoin5 * 0.2;
+                OwnMoney +=  0.2;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin5 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -210,7 +223,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin6 -= 1;
                 Edit6.setText(Integer.toString(EEcoin6));
-                OwnMoney += EEcoin6 * 0.5;
+                OwnMoney -=  0.5;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin6 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -224,7 +238,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin6 += 1;
                 Edit6.setText(Integer.toString(EEcoin6));
-                OwnMoney += EEcoin6 * 0.5;
+                OwnMoney +=  0.5;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin6 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -238,7 +253,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin7 -= 1;
                 Edit7.setText(Integer.toString(EEcoin7));
-                OwnMoney += EEcoin7;
+                OwnMoney -= 1;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin7 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -252,7 +268,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin7 += 1;
                 Edit7.setText(Integer.toString(EEcoin7));
-                OwnMoney += EEcoin7;
+                OwnMoney += 1;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin7 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -266,7 +283,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin8 -= 1;
                 Edit8.setText(Integer.toString(EEcoin8));
-                OwnMoney += EEcoin8 * 2;
+                OwnMoney -=  2;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin8 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -280,7 +298,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin8 += 1;
                 Edit8.setText(Integer.toString(EEcoin8));
-                OwnMoney += EEcoin8 * 2;
+                OwnMoney +=  2;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin8 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -294,7 +313,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin9 -= 1;
                 Edit9.setText(Integer.toString(EEcoin9));
-                OwnMoney += EEcoin9 * 5;
+                OwnMoney -=  5;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin9 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -308,7 +328,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin9 += 1;
                 Edit9.setText(Integer.toString(EEcoin9));
-                OwnMoney += EEcoin9 * 5;
+                OwnMoney +=  5;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin9 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -322,7 +343,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin10 -= 1;
                 Edit10.setText(Integer.toString(EEcoin10));
-                OwnMoney += EEcoin10 * 10;
+                OwnMoney -=  10;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin10 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -336,7 +358,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin10 += 1;
                 Edit10.setText(Integer.toString(EEcoin10));
-                OwnMoney += EEcoin10 * 10;
+                OwnMoney +=  10;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin10 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -350,7 +373,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin11 -= 1;
                 Edit11.setText(Integer.toString(EEcoin11));
-                OwnMoney += EEcoin11 * 20;
+                OwnMoney -=  20;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin11 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -364,7 +388,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin11 += 1;
                 Edit11.setText(Integer.toString(EEcoin11));
-                OwnMoney += EEcoin11 * 20;
+                OwnMoney +=  20;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin11 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -378,7 +403,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin12 -= 1;
                 Edit12.setText(Integer.toString(EEcoin12));
-                OwnMoney += EEcoin12 * 50;
+                OwnMoney -=  50;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin12 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -392,7 +418,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin12 += 1;
                 Edit12.setText(Integer.toString(EEcoin12));
-                OwnMoney += EEcoin12 * 50;
+                OwnMoney +=  50;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin12 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -406,7 +433,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin13 -= 1;
                 Edit13.setText(Integer.toString(EEcoin13));
-                OwnMoney += EEcoin13 * 100;
+                OwnMoney -=  100;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin13 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -420,7 +448,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin13 += 1;
                 Edit13.setText(Integer.toString(EEcoin13));
-                OwnMoney += EEcoin13 * 100;
+                OwnMoney +=  100;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin13 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -434,7 +463,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin14 -= 1;
                 Edit14.setText(Integer.toString(EEcoin14));
-                OwnMoney += EEcoin14 * 200;
+                OwnMoney -=  200;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin14 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -448,7 +478,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin14 += 1;
                 Edit14.setText(Integer.toString(EEcoin14));
-                OwnMoney += EEcoin14 * 200;
+                OwnMoney +=  200;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin14 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -462,7 +493,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin15 -= 1;
                 Edit15.setText(Integer.toString(EEcoin15));
-                OwnMoney += EEcoin15 * 500;
+                OwnMoney -=  500;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin15 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
@@ -476,7 +508,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {
                 EEcoin15 += 1;
                 Edit15.setText(Integer.toString(EEcoin15));
-                OwnMoney += EEcoin15 * 500;
+                OwnMoney +=  500;
+                Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin15 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
                 }
