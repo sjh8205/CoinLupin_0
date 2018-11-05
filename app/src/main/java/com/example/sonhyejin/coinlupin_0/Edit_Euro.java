@@ -33,6 +33,7 @@ public class Edit_Euro extends AppCompatActivity {
 
     float OwnMoney; // 총 보유금액 sp 에서 가져올거
 
+    boolean a; // boolean 함수 선언 (화폐 범위 넘으면 if 문 선언할려고)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class Edit_Euro extends AppCompatActivity {
         Total_Money = (TextView) findViewById(R.id.Total_Money);
         Total_Money.setText(Float.toString(OwnMoney));
 
+        a = true;
 
         //sp 에서 동전 개수(Ecoin) 불러오기
         // Edit에 받아야되는데 int 라서 일단 EEcoin에 받음
@@ -76,8 +78,11 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin1 < 0) {//입력범위 초과한 경우 오류메세지 띄움
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false; // 범위 넘을 경우
                 }
-
+                else {
+                    a = true; // 범위 안 넘을 경우
+                }
             }
         });
 
@@ -92,6 +97,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin1 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else{
+                    a = true;
                 }
             }
         });
@@ -107,6 +116,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin2 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -122,6 +135,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin2 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -137,6 +154,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin3 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -152,6 +173,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin3 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -167,8 +192,13 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin4 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else{
+                    a=true;
                 }
             }
+
         });
 
         pBtn4 = findViewById(R.id.pBtn4);
@@ -182,6 +212,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin4 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -197,6 +231,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin5 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -212,6 +250,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin5 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -227,6 +269,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin6 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -242,6 +288,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin6 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -257,6 +307,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin7 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -272,6 +326,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin7 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -287,6 +345,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin8 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -302,6 +364,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin8 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -317,6 +383,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin9 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -332,6 +402,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin9 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -347,6 +421,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin10 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -362,6 +440,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin10 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -377,6 +459,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin11 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -392,6 +478,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin11 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -407,6 +497,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin12 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -422,6 +516,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin12 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -437,6 +535,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin13 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -452,6 +554,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin13 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -467,6 +573,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin14 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -482,6 +592,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin14 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -497,6 +611,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin15 < 0) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -512,6 +630,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin15 > 30) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -526,6 +648,8 @@ public class Edit_Euro extends AppCompatActivity {
             public void onClick(View view) {//편집한 값 sp에 저장
                 SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
+
+
 
                 editor.putInt("cent1", EEcoin1);
                 editor.putInt("cent2", EEcoin2);
@@ -544,12 +668,21 @@ public class Edit_Euro extends AppCompatActivity {
                 editor.putInt("cent50000", EEcoin15);
                 editor.putFloat("Total_Money", OwnMoney);
 
+                //입력범위 초과 안할 경우 값이 넘어가는지
                 //Toast.makeText(Edit_Euro.this, "score:" + EEcoin1, Toast.LENGTH_LONG).show();
-                
+
+                //입력범위 초과 할 경우 화면 전환 되는지
+
 
                 editor.apply();
 
-                startActivity(NextPay);
+                if(a==false)
+                    Toast.makeText(Edit_Euro.this, "범위를 초과하였습니다." , Toast.LENGTH_LONG).show(); // 범위 초과할 경우 토스트 메세지를 띄우고 화면이 넘어가지 않는다.
+                else{
+                    a = true; // 범위 초과 안 할 경우 다음 화면으로 넘어간다.
+                    startActivity(NextPay);
+                }
+
             }
         });
     }

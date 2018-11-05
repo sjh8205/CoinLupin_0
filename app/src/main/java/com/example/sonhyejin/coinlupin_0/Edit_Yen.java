@@ -30,6 +30,8 @@ public class Edit_Yen extends AppCompatActivity {
 
     float OwnMoney;
 
+    boolean a; // boolean 함수 선언 (화폐 범위 넘으면 if 문 선언할려고)
+
 
 
     @Override
@@ -42,6 +44,8 @@ public class Edit_Yen extends AppCompatActivity {
         OwnMoney = shared.getFloat("total_money", 0);
         Total_Money = (TextView)findViewById(R.id.Total_Money);
         Total_Money.setText(Float.toString(OwnMoney));
+
+        a = true;
 
 
         //sp 에서 동전 개수(YEcoin) 불러오기
@@ -71,6 +75,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin1 < 0) {//입력범위 초과시 오류메세지 띄움
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;// 범위를 넘을 경우
+                }
+                else {
+                    a = true;// 범위를 안 넘을 경우
                 }
             }
         });
@@ -86,6 +94,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin1 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -101,6 +113,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin2 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -116,6 +132,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin2 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -131,6 +151,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin3 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -146,6 +170,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin3 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -161,6 +189,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin4 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -176,6 +208,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin4 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -191,6 +227,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin5 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -206,6 +246,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin5 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -221,6 +265,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin6 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -236,6 +284,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin6 > 20) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -251,6 +303,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin7 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -266,6 +322,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin7 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -281,6 +341,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin8 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -296,6 +360,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin8 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -311,6 +379,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin9 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -326,6 +398,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin9 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -341,6 +417,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin10 < 0) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -356,6 +436,10 @@ public class Edit_Yen extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (YEcoin10 > 30) {
                     Toast.makeText(Edit_Yen.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
+                    a = false;
+                }
+                else {
+                    a = true;
                 }
             }
         });
@@ -386,9 +470,19 @@ public class Edit_Yen extends AppCompatActivity {
 
                 editor.putFloat("Total_Money", OwnMoney);
 
-                editor.apply();
 
-                startActivity(NextPay);
+                //입력범위 초과 안할 경우 값이 넘어가는지
+                //Toast.makeText(Edit_Yen.this, "score:" + YEcoin1, Toast.LENGTH_LONG).show();
+
+
+                editor.apply();
+                if(a==false)
+                    Toast.makeText(Edit_Yen.this, "범위를 초과하였습니다." , Toast.LENGTH_LONG).show(); // 범위 초과할 경우 토스트 메세지를 띄우고 화면이 넘어가지 않는다.
+                else {
+                    a = true;
+                    startActivity(NextPay); // 범위 초과 안 할 경우 화면이 전환된다.
+                }
+
             }
         });
     }
