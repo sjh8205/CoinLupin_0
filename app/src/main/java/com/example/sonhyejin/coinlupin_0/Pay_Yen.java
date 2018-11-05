@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.nio.BufferOverflowException;
+import java.util.InputMismatchException;
+
 public class Pay_Yen extends AppCompatActivity {
 
 
@@ -28,25 +31,41 @@ public class Pay_Yen extends AppCompatActivity {
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
         intent = new Intent(Pay_Yen.this, Recommend_Yen.class);
 
-        yBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                if(yen.getText().length()>0) {      //길이로 입력 여부를 판단
-                    y = Integer.parseInt(yen.getText().toString());    //textView에 입력된 값이 String형이라 integer값으로 변환
-                }else   //입력된 값이 없을 때 0으로 값을 전달
-                    y=0;
+            yBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (yen.getText().length() > 0) {      //길이로 입력 여부를 판단
+                        try{    //int값 입력 예외처리
+                            y = Integer.parseInt(yen.getText().toString());    //textView에 입력된 값이 String형이라 integer값으로 변환
+                            if (y > shared.getFloat("total_money", 0)) { //sharedPreference에서 총액을 받아옴
+                                Toast.makeText(Pay_Yen.this, "보유금액을 초과합니다!", Toast.LENGTH_LONG).show();
+                            } else {
+                                intent.putExtra("y", y);    //다음 화면에 키값 'y'으로 값 전달
 
-                //총 보유 금액을 넘기는 금액을 입력했을 때 toast 메세지띄우기
-                //if(eIN*100+eDE > 10) { //total_money 받아 오기 전에 조건에 따라 toast메세지가 잘 뜨는지 확인 하기 위해 사용했던 구문
-                if(y > shared.getFloat("total_money", 0)) { //sharedPreference에서 총액을 받아옴
-                    Toast.makeText(Pay_Yen.this, "보유금액을 초과합니다!", Toast.LENGTH_LONG).show();
-                }else {
-                    intent.putExtra("y", y);    //다음 화면에 키값 'y'으로 값 전달
-
-                    startActivity(intent);
+                                startActivity(intent);
+                            }
+                        }catch (Exception e){
+                            Toast.makeText(Pay_Yen.this, "입력이 너무 큽니다!", Toast.LENGTH_LONG).show();
+                        }
+                    } else {   //입력된 값이 없을 때 0으로 값을 전달 -> 지불 금액을 입력하도록 유도
+                        Toast.makeText(Pay_Yen.this, "지불 금액을 입력해주세요", Toast.LENGTH_LONG).show();
+//                        y = 0;
+//                        intent.putExtra("y", y);    //다음 화면에 키값 'y'으로 값 전달
+//
+//                        startActivity(intent);
+                    }
+                    //총 보유 금액을 넘기는 금액을 입력했을 때 toast 메세지띄우기
+                    //if(eIN*100+eDE > 10) { //total_money 받아 오기 전에 조건에 따라 toast메세지가 잘 뜨는지 확인 하기 위해 사용했던 구문
+//                    if (y > shared.getFloat("total_money", 0)) { //sharedPreference에서 총액을 받아옴
+//                        Toast.makeText(Pay_Yen.this, "보유금액을 초과합니다!", Toast.LENGTH_LONG).show();
+//                    } else {
+//                        intent.putExtra("y", y);    //다음 화면에 키값 'y'으로 값 전달
+//
+//                        startActivity(intent);
+//                    }
                 }
-            }
-        });
+            });
+
     }
 }
