@@ -50,7 +50,9 @@ public class Pay_Euro extends AppCompatActivity {
 
                         //총 보유 금액을 넘기는 금액을 입력했을 때 toast 메세지띄우기
                         //if(eIN*100+eDE > 10) { //total_money 받아 오기 전에 조건에 따라 toast메세지가 잘 뜨는지 확인 하기 위해 사용했던 구문
-                        if (eIN * 100 + eDE > shared.getFloat("total_money", 0) * 100) { //sharedPreference에서 총액을 받아옴
+                        if(eIN==0 && eDE==0){
+                            Toast.makeText(Pay_Euro.this, "지불 금액을 입력해주세요", Toast.LENGTH_LONG).show();
+                        }else if (eIN * 100 + eDE > shared.getFloat("total_money", 0) * 100) { //sharedPreference에서 총액을 받아옴
                             Toast.makeText(Pay_Euro.this, "보유금액을 초과합니다!", Toast.LENGTH_LONG).show();
                         } else if (eDE >= 100) {    //테스트를 통해 추가한 구문, 센트에서 100을 넘기는 값은 유로에 해당한다.
                             Toast.makeText(Pay_Euro.this, "센트는 100미만의 값을 입력해 주세요!", Toast.LENGTH_LONG).show();

@@ -38,7 +38,9 @@ public class Pay_Yen extends AppCompatActivity {
                     if (yen.getText().length() > 0) {      //길이로 입력 여부를 판단
                         try{    //int값 입력 예외처리
                             y = Integer.parseInt(yen.getText().toString());    //textView에 입력된 값이 String형이라 integer값으로 변환
-                            if (y > shared.getFloat("total_money", 0)) { //sharedPreference에서 총액을 받아옴
+                            if(y==0){
+                                Toast.makeText(Pay_Yen.this, "지불 금액을 입력해주세요", Toast.LENGTH_LONG).show();
+                            }else if (y > shared.getFloat("total_money", 0)) { //sharedPreference에서 총액을 받아옴
                                 Toast.makeText(Pay_Yen.this, "보유금액을 초과합니다!", Toast.LENGTH_LONG).show();
                             } else {
                                 intent.putExtra("y", y);    //다음 화면에 키값 'y'으로 값 전달
