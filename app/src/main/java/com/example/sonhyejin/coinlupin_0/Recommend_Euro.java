@@ -250,14 +250,17 @@ public class Recommend_Euro extends AppCompatActivity {
         String eIN2 = Integer.toString(eIN);    //넘어온 값이 integer값이라 string형으로 변환
         //String eDE2 = Integer.toString(eDE);  //테스트를 해보니 6센트를 지불하기 위해 06을 입력하거나 6을 입력하면 0.6으로 값이 표시되는 오류 발생
         String eDE2;
-        if(eDE<10)
+        if(eDE<10 && eIN==0)    //유로칸에 0이상의 값을 입력하고 센트 부분에 1~9의 값을 입력하면 그것은 10~90을 의미 -> eIN==0이라는 조건 추가
             eDE2 = "0"+Integer.toString(eDE);
         else
             eDE2 = Integer.toString(eDE);
 
         payEuro.setText(eIN2+"."+eDE2); //총액표시
 
-        CalculateCoin(eIN*100+eDE); //추천 동전 개수 계산 함수 호출
+        if(eIN>0 && eDE<10)    //유로칸에 0이상의 값을 입력하고 센트 부분에 1~9의 값을 입력하면 그것은 10~90을 의미 -> 조건 추가
+            CalculateCoin(eIN*100+eDE*10);
+        else
+            CalculateCoin(eIN*100+eDE); //추천 동전 개수 계산 함수 호출
 
         //동전개수 표시하기
         pE1.setText(Integer.toString(rE[0]));
