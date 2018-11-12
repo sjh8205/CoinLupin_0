@@ -49,7 +49,7 @@ public class Pay_Euro extends AppCompatActivity {
                             eDE = 0;
 
                         //센트칸에 5를 입력한 경우 50으로 처리하도록
-                        if(euroDE.getText().length()==1 && eDE<10)  //입력의 길이가 1이고 값이 10보다 작으면 10배를 해준다.
+                        if(eIN > 0 && euroDE.getText().length()==1 && eDE<10)  //입력의 길이가 1이고 값이 10보다 작으면 10배를 해준다.
                             eDE = eDE*10;
 
                         //총 보유 금액을 넘기는 금액을 입력했을 때 toast 메세지띄우기
