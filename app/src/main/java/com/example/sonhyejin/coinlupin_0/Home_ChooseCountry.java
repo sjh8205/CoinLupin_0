@@ -23,7 +23,7 @@ public class Home_ChooseCountry extends AppCompatActivity {
         //화면 전환 SharedPreferences 사용을 위해 선언
         move.putInt("FirstorNot",0);
         move.commit();
-        //화면 값 초기화
+        //화면 값 초기화 --> reset한 기존 사용자가 이 화면에서 종료할 경우를 대비하여 FirstorNot 값을 0으로 저장
 
         gotoEurope.setOnClickListener(new View.OnClickListener() {
             @Override
