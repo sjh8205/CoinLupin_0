@@ -28,7 +28,7 @@ public class Edit_Yen extends AppCompatActivity {
     TextView Edit1, Edit2, Edit3, Edit4, Edit5, Edit6, Edit7,
             Edit8, Edit9, Edit10;//edit 된 동전개수
 
-    float OwnMoney;
+    float OwnMoney; //총 보유 금액 sp에서 가져올거
 
     boolean a; // boolean 함수 선언 (화폐 범위 넘으면 if 문 선언할려고)
 
@@ -45,7 +45,7 @@ public class Edit_Yen extends AppCompatActivity {
         Total_Money = (TextView)findViewById(R.id.Total_Money);
         Total_Money.setText(Float.toString(OwnMoney));
 
-        a = true;
+        a = true; // boolean 함수 선언 (화폐 범위 넘으면 if 문 선언하려고)
 
 
         //sp 에서 동전 개수(YEcoin) 불러오기

@@ -42,11 +42,11 @@ public class Edit_Euro extends AppCompatActivity {
 
         SharedPreferences shared = getSharedPreferences("name", Context.MODE_PRIVATE);
 
-        OwnMoney = shared.getFloat("total_money", 0);
+        OwnMoney = shared.getFloat("total_money", 0); //sp에서 값 가져옴
         Total_Money = (TextView) findViewById(R.id.Total_Money);
         Total_Money.setText(Float.toString(OwnMoney));
 
-        a = true;
+        a = true; //boolean 함수 선언 (화폐 범위 넘으면 if 문 선언하려고)
 
         //sp 에서 동전 개수(Ecoin) 불러오기
         // Edit에 받아야되는데 int 라서 일단 EEcoin에 받음
@@ -97,10 +97,10 @@ public class Edit_Euro extends AppCompatActivity {
                 Total_Money.setText(Float.toString(OwnMoney));
                 if (EEcoin1 > 20) {
                     Toast.makeText(Edit_Euro.this, "입력범위를 초과하였습니다!", Toast.LENGTH_LONG).show();
-                    a = false;
+                    a = false; //범위를 넘을 경우
                 }
                 else{
-                    a = true;
+                    a = true; //범위를 안넘을 경우
                 }
             }
         });
